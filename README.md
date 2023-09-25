@@ -1,6 +1,6 @@
 # Proyecto01-SWI
 
-##Participantes
+## Participantes
 - Dulibeth Medina 
 - Marta Canino 
 - Xavier Mora
