@@ -1,23 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Landing Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TutorMe</title>
+    <meta name="description" content="TutorMe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/TutorMeLogo.png" type="image/png">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-    <header>
-        <button>Sign In</button>
-    </header>
-    <div class="container">
-        <div class="welcome-text">
-            <h1>Welcome to Our Website</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in mauris ac arcu auctor egestas. Fusce convallis sit amet sem in convallis.</p>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <!--img class="logo_img" src="images/TutorMeLogo.png" alt="TutorMe Logo"-->
+            <h2> <a href="#" class="logo">TutorMe</a></h2>
+            <div class="navigation">
+                <a href="#services">Services</a>
+                <a href="#universities">About us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a class="cta" href="#"><button>Log In</button></a>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        <div class="content">
+            <div class="info">
+                <h2>Your Platform, <br><span>For Students</span></h2>
+                <p>Where students get together for a bigger, better community</p>
+                <a href="#" class="info-btn">Join us</a>
+            </div>
+            <img src="/src/images/student.png" alt="Student Image" class="student-image">
         </div>
-        <img class="welcome-image" src="your-image.jpg" alt="Welcome Image">
-    </div>
-    <footer>
-        &copy; 2023 Your Company Name
-    </footer>
+    </section>
+
+    <section class="services-section" id="services">
+        <div class="service-container">
+            <h3>Services</h3>
+            <div class="service-images">
+                <div class="service-item">
+                    <img src="/src/images/about1.jpg" alt="Service 1">
+                    <p>Study Better</p>
+                </div>
+                <div class="service-item">
+                    <img src="/src/images/about2.jpg" alt="Service 2">
+                    <p>Find your peers</p>
+                </div>
+                <div class="service-item">
+                    <img src="/src/images/about3.avif" alt="Service 3">
+                    <p>Organise your classes</p>
+                </div>
+                <div class="service-item">
+                    <img src="/src/images/about4.avif" alt="Service 4">
+                    <p>Connect with others</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="universities-section" id="universities">
+        <div class="container universities">
+            <h3>our universities</h3>
+            <div class="image-grid">
+                <!-- First Row of Images -->
+                <div class="image">
+                    <img src="/src/images/univ_carlosiii.png" alt="University 1">
+                </div>
+                <div class="image">
+                    <img src="/src/images/univ_ceu.png" alt="University 2">
+                </div>
+                <div class="image">
+                    <img src="/src/images/univ_complu.png" alt="University 3">
+                </div>
+                <div class="image">
+                    <img src="/src/images/univ_politecnica.png" alt="University 4">
+                </div>
+                <!-- Second Row of Images -->
+                <div class="image">
+                    <img src="/src/images/univ_reyjuancarlos.png" alt="University 5">
+                </div>
+                <div class="image">
+                    <img src="/src/images/univ_comillas.jpg" alt="University 6">
+                </div>
+                <div class="image">
+                    <img src="/src/images/univ_cunef.png" alt="University 7">
+                </div>
+                <div class="image">
+                    <img src="/src/images/univ_navarra.jpeg" alt="University 8">
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
+<footer>
+    <img src="/src/images/TutorMeLogo.png" alt="Your Logo" class="footer-logo">
+    <div id="contact">
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </div>
+</footer>
+
+
 </html>

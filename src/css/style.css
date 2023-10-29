@@ -1,39 +1,462 @@
-/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat,wght@1,500&display=swap');
 
-body {
-    font-family: Arial, sans-serif;
+/* Styles that override everything */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    background: #060f3b;
+}
+
+/* Updated styles for the sections */
+section {
+    min-height: calc(33.33vh - 60px); /* Approximately 1/3 of the viewport height */
+}
+
+.services-section,
+.universities-section {
+    min-height: calc(33.33vh - 60px); /* Approximately 1/3 of the viewport height */
+    max-width: 100%; /* Set the maximum width to 60% of the page */
+    margin: 0 auto; /* Center the sections horizontally */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: right;
-}
-
-.container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 10%; /* Updated padding values */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 80vh;
 }
 
-.welcome-text {
-    text-align: center;
-    font-size: 24px;
+header .logo {
+    color: #e6e6ef;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header .navigation a {
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+header .navigation a:not(:last-child) {
     margin-right: 30px;
 }
 
-.welcome-image {
-    max-width: 50%;
+header .navigation a:hover {
+    background: #fff;
+    color: #77dec9;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around; /* Adjusted alignment */
+    max-width: 100%; /* Adjusted maximum width to span the entire width of the section */
+    margin: 60px 10%; /* Adjusted margin values */
+}
+
+.content .info {
+    flex: 1; /* Allow the "info" element to grow and take up available space */
+    max-width: 100%; /* Adjusted maximum width for "info" element */
+    padding: 50px;
+}
+
+.content .info h2 {
+    color: #77dec9;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 60px;
+}
+
+.content .info h2 span {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.content .info p {
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.content .info-btn {
+    color: #fff;
+    background: #226A80;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.content .info-btn:hover {
+    background: #0C4F60;
+}
+
+/* Styles for the new image */
+.student-image {
+    max-width: 100%;
+    height: auto;
+    float:inline-start;
+}
+
+/* Styles for the Services section */
+.services-section {
+    background-color: whitesmoke;
+    padding: 60px 10%;
+}
+
+.service-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-container h3 {
+    color: #000;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.service-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 0 10%;
+}
+
+.service-item {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Styles for the Universities section */
+.universities-section {
+    background-color: #060f3b;
+    padding: 60px 10%;
+}
+
+.container.universities {
+    max-width: 100%;
+}
+
+.container.universities h3 {
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow the "containers" to grow and take up available space */
+    max-width: 50%; /* Adjusted maximum width for "containers" */
+    padding-left: 20px; /* Added padding to separate "info" and "containers" */
+}
+
+.container {
+    align-self: flex-start; /* Updated alignment */
+    flex-grow: 1;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.container h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+.container.universities h3 {
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Center the text vertically using margin */
+    font-family: "Monserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.container.universities {
+    flex: 1; /* Allow the container to grow and take available space */
+    max-width: 50%; /* Set the maximum width to 40% of the page */
+    align-self: center;
+}
+
+.container.universities .image-grid {
+    display: grid; /* Use a CSS grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 10px;
+    max-width: 100%;
+}
+
+.container.universities .image {
+    flex: 1; /* Allow each image to fill its grid cell */
+    padding-left: 70px;
+}
+
+.container.universities .image img {
+    width: 50%;
     height: auto;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
+/* Styles for the new Services section */
+.services-section {
+    background-color: #060f3b;
+    padding: 60px 10%;
+}
+
+.service-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 10px;
+}
+
+.service-container h3 {
+    color: whitesmoke;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.service-icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 0 10%;
+}
+
+.service-item {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 50px;
+    color: #7787de;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 20px;
+    padding: 10px 25px;
+    background-color: rgb(172, 247, 219);
+    font-weight: 600; /* Updated value */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: rgba(18, 152, 186, 0.8);
+}
+
+label {
+    display: none;
+}
+
+#check {
+    z-index: 3;
+    display: none;
+}
+
+/* Updated styles for the footer */
+footer {
+    background-color: #060f3b;
+    color: #fff;
+    padding: 20px 0; /* Remove left and right padding */
+    text-align: center;
+    display: flex; /* Use flexbox to align content */
+    justify-content: space-between; /* Distribute content evenly */
+    align-items: center; /* Center vertically */
+}
+
+footer a {
+    color: #77dec9;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the footer logo */
+.footer-logo {
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto;
+}
+
+
+
+/* Media query styles remain the same */
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 960px) {
+    header .navigation{
+        display: none;
+    }
+
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+
+    label:hover{
+        color: #fff;
+    }
+
+    label .close-btn{
+        display: none;
+    }
+
+    #check:checked ~ header .navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgba(114, 223, 255, 0.9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #check:checked ~ header label .menu-btn{
+        display: none;
+    }
+
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+
+    label .menu-btn{
+        position: absolute;
+    }
+
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+    }
+
+    .content .info h2{
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .content .info h2 span{
+        font-size: 40px;
+        line-height: 600;
+    }
+
+    .content .info p{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 560px){
+
+    .content .info h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .content .info h2 span{
+        font-size: 30px;
+        line-height: 600;
+    }
+
+    .content .info p{
+        font-size: 14px;
+    }
+        
+
 }
