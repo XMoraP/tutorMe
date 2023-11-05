@@ -120,3 +120,147 @@ body.active .wrapper .section{
   margin-left: 0;
   width: 100%;
 }
+
+
+/* CHATS */
+
+.container {
+    max-width: 1300px; /* Ajusta el ancho máximo del contenedor */
+    max-height: 700px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+}
+
+.container h2 {
+    margin-bottom: 40px; 
+    margin-top: -30px;
+}
+
+.chat-content {
+    display: flex;
+}
+
+/* Lista de chats */
+.chat-list {
+    max-width: 250px; /* Aumenta el ancho máximo de la lista de chats */
+    width: 400px;
+    padding: 10px;
+    border-right: 1px solid #a6a6a6;
+    background-color: rgba(47,186,232,1);
+    border-radius: 2%;
+}
+
+.chat-list h3 {
+    margin-bottom: 10px;
+}
+
+.chat-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chat-list li {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 16px; /* Ajusta el tamaño de la fuente para los elementos de la lista de chats */
+}
+
+.chat-list li.active {
+    background-color: #ffffff;
+    color: #0b0b0b;
+   
+}
+
+/* Área de mensajes */
+.chat-messages {
+    flex-grow: 1;
+    height: 500px; /* Aumenta la altura del área de mensajes */
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 10px;
+    border: 3px solid rgb(61, 188, 243);
+    border-radius: 5px;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 80%;
+    font-size: 16px; /* Ajusta el tamaño de la fuente para los mensajes */
+}
+
+.message.received {
+    background-color: #f0f0f0;
+}
+
+.message.sent {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+    display: block;
+    width: fit-content; /* Cambio a fit-content */
+}
+
+/* Cuadro de entrada de texto y botón de enviar */
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    background-color: #e3e2e2;
+    padding: 20px; /* Aumenta el relleno del contenedor */
+    border-top: 1px solid #ccc;
+    border-radius: 2%;
+}
+
+.chat-input-container input {
+    flex-grow: 1;
+    padding: 10px; /* Aumenta el relleno del input */
+    border: none;
+    border-radius: 10px;
+    font-size: 18px; /* Aumenta el tamaño de la fuente del input */
+    outline: none;
+}
+
+.chat-input-container button {
+    font-size: 18px; /* Aumenta el tamaño de la fuente del botón */
+    padding: 10px 20px; /* Aumenta el relleno del botón */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Media queries para responsive design */
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .chat-list {
+        max-width: 100%;
+        border-right: none;
+    }
+
+    .chat-input-container {
+        padding: 10px; /* Ajusta el relleno del contenedor en pantallas pequeñas */
+    }
+
+    .chat-input-container input {
+        padding: 8px; /* Ajusta el relleno del input en pantallas pequeñas */
+        font-size: 14px; /* Ajusta el tamaño de la fuente del input en pantallas pequeñas */
+    }
+
+    .chat-input-container button {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del botón en pantallas pequeñas */
+        padding: 8px 16px; /* Ajusta el relleno del botón en pantallas pequeñas */
+    }
+}
+
+
+
