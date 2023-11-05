@@ -124,7 +124,7 @@ body.active .wrapper .section{
 
 /* CHATS */
 
-.container {
+.container-chat {
     max-width: 1300px; /* Ajusta el ancho máximo del contenedor */
     max-height: 700px;
     margin: 0 auto;
@@ -134,7 +134,7 @@ body.active .wrapper .section{
     font-size: 18px; /* Aumenta el tamaño de la fuente */
 }
 
-.container h2 {
+.container-chat h2 {
     margin-bottom: 40px; 
     margin-top: -30px;
 }
@@ -238,7 +238,7 @@ body.active .wrapper .section{
 
 /* Media queries para responsive design */
 @media screen and (max-width: 480px) {
-    .container {
+    .container-chat {
         max-width: 100%;
     }
 
