@@ -3,6 +3,7 @@ hamburger.addEventListener("click", function(){
   document.querySelector("body").classList.toggle("active");
 })
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatListItems = document.querySelectorAll('.chat-list li');
     const chatMessages = document.getElementById('chat-messages');
@@ -46,4 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   
+=======
+>>>>>>> 37519bd0f3a785ea7cd67c140e6a7dedc87f1641
 
