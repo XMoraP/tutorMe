@@ -137,7 +137,6 @@ body.active .wrapper .section{
 }
 
 
-
 /* CHATS */
 
 .container-chat {
@@ -191,6 +190,13 @@ body.active .wrapper .section{
     background-color: #ffffff;
     color: #0b0b0b;
    
+}
+
+.chat-profile-image {
+  width: 50px; /* Ajusta el tamaño según tus preferencias */
+  height: 50px; /* Ajusta el tamaño según tus preferencias */
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 /* Área de mensajes */
