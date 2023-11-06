@@ -1,5 +1,3 @@
-<!--Design by foolishdeveloper.com-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +12,8 @@
     </style>
 </head>
 <body>
-   
+
+   <!-- Top bar-->
     <div class="wrapper">
        <div class="section">
     <div class="top_navbar">
@@ -24,10 +23,44 @@
         </a>
       </div>
     </div>
-    <div class="container">
-      
+
+  <!--Chats-->
+<div class="container-chat">
+    <h2>Chats</h2>
+    <!-- Contenedor de la lista de chats y el área de mensajes -->
+    <div class="chat-content">
+        <!-- Lista de chats falsos -->
+        <div class="chat-list">
+            <h4> Lista de chats</h4>
+            <br/>
+            <ul>
+                <li class="active">Juan Pérez</li>
+                <li>Maria González</li>
+                <li>Pedro Rodríguez</li>
+                <li>Laura Martínez</li>
+                <li>Dulibeth Medina</li>
+                <!-- Agrega más chats según sea necesario -->
+            </ul>
+        </div>
+
+        <!-- Área de mensajes -->
+        <div class="chat-messages" id="chat-messages">
+            
+
+        </div>
     </div>
-  </div>
+
+    <!-- Cuadro de entrada de texto y botón de enviar -->
+    <div class="chat-input-container">
+        <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+        <button id="send-button">Enviar</button>
+    </div>
+</div>
+
+  
+          
+    <!--Side Bar-->
+  <div>
         <div class="sidebar">
             <div class="profile">
                 <img src="images/TutorMeLogo.png" alt="profile_picture">
