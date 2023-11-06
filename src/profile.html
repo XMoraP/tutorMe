@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+    </style>
+</head>
+<body>
+
+   <!-- Top bar-->
+    <div class="wrapper">
+       <div class="section">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <a href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+ <!-- Profile Sections -->
+<div class="container">
+    <div class="container-fluid">
+        <h2>Perfil</h2>
+        <div class="container">
+            <h4>Información de usuario</h4>
+            <br>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                  <label for="validationCustom01" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="validationCustom01" value="Sara" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom02" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="validationCustom02" value="Lopez" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustomUsername" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                      <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="saralopez.2000@gmail.com" required>
+                      <div class="invalid-feedback">
+                          Please choose a valid email.
+                      </div>
+                  </div>
+              </div>
+                <div class="col-md-4">
+                  <label for="validationCustomUsername" class="form-label">Nombre Usuario</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="SaraL" required>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom03" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="validationCustom03" value="Madrid">
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom04" class="form-label">Universidad</label>
+                  <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value="">Elige...</option>
+                      <option value="option1">Ceu San Pablo</option>
+                      <option value="option2">UCLA</option>
+                      <option value="option3">Harvard</option>
+                  </select>
+                  <div class="invalid-feedback">
+                      Por favor selecciona una universidad válida.
+                  </div>
+              </div>
+                <div class="col-md-5">
+                  <label for="validationCustom05" class="form-label">Grado</label>
+                  <input type="text" class="form-control" id="validationCustom05" value="Arquitectura">
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Guardar</button>
+                </div>
+              </form>
+              <br>
+              <br>
+
+              <h4>Pago</h4>
+              <br>
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                      <label for="validationCustom01" class="form-label">Número de tarjeta</label>
+                      <input type="text" class="form-control" id="validationCustom01" value="4111 1111 1111 1111" required>
+                      <div class="valid-feedback">
+                          Looks good!
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="validationCustom02" class="form-label">Nombre en la tarjeta</label>
+                      <input type="text" class="form-control" id="validationCustom02" value="Sara Lopez" required>
+                      <div class="valid-feedback">
+                          Looks good!
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="validationCustom03" class="form-label">Fecha de expiración</label>
+                      <input type="text" class="form-control" id="validationCustom03" value="12/23" required>
+                      <div class="valid-feedback">
+                          Looks good!
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="validationCustom04" class="form-label">CVV</label>
+                      <input type="text" class="form-control" id="validationCustom04" value="123" required>
+                      <div class="valid-feedback">
+                          Looks good!
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Guardar</button>
+                  </div>
+              </form>
+              <br>
+              <br>
+              <h4>Editar Contraseña</h4>
+              <br>
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                      <label for="validationCustom01" class="form-label">Contraseña actual</label>
+                      <div class="input-group">
+                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                          <input type="password" class="form-control" id="validationCustom01" required>
+                          <div class="invalid-feedback">
+                              Por favor, ingresa tu contraseña actual.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="validationCustom02" class="form-label">Nueva Contraseña</label>
+                      <div class="input-group">
+                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                          <input type="password" class="form-control" id="validationCustom02" required>
+                          <div class="invalid-feedback">
+                              Por favor, ingresa tu nueva contraseña.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="validationCustom03" class="form-label">Confirmar Nueva Contraseña</label>
+                      <div class="input-group">
+                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                          <input type="password" class="form-control" id="validationCustom03" required>
+                          <div class="invalid-feedback">
+                              Por favor, confirma tu nueva contraseña.
+                          </div>
+                      </div>
+                  </div>
+              
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                </div>
+              </form>
+              <br>
+              <br>
+              <h4>Alta tutor</h4>
+              <br>
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                      <label for="validationCustom01" class="form-label">Asignaturas a impartir</label>
+                      <input type="text" class="form-control" id="validationCustom01" required>
+                      <div class="invalid-feedback">
+                          Por favor, ingresa las asignaturas a impartir.
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Tarifa</label>
+                    <input type="text" class="form-control" id="validationCustom02" pattern="[0-9]+" title="Por favor, ingresa solo números" required>
+                    <div class="invalid-feedback">
+                        Por favor, ingresa la tarifa.
+                    </div>
+                </div>
+                
+                  <div class="col-md-4">
+                      <label for="validationCustomUsername" class="form-label">Contraseña</label>
+                      <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-lock"></i></span>
+                          <input type="password" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                              Por favor, elige una contraseña.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <button class="btn btn-success" type="button" onclick="window.location.href='profileTutor.html'">Alta tutor</button>
+                  </div>
+              </form>
+        </div>
+    </div>
+</div>     
+    <!--Side Bar-->
+  <div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="images/TutorMeLogo.png" alt="profile_picture">
+                <h3>Sara Lopez</h3>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
