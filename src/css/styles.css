@@ -33,7 +33,7 @@ body{
   display: block;
   width: 100px;
   height: 100px;
-    border-radius: 50%;
+  border-radius: 50%;
   margin: 0 auto;
 }
 
@@ -124,10 +124,11 @@ body.active .wrapper .section{
 /* CHATS */
 
 .container-chat {
+    padding: 50px;
     max-width: 1300px; /* Ajusta el ancho máximo del contenedor */
     max-height: 700px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+   
     border-radius: 10px;
     background-color: #f9f9f9;
     font-size: 18px; /* Aumenta el tamaño de la fuente */
