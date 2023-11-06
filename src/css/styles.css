@@ -120,6 +120,23 @@ body.active .wrapper .section{
   width: 100%;
 }
 
+.logout {
+  position: absolute;
+  bottom: 60px; /* Ajusta esta propiedad según tu preferencia */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.logout a {
+  color: rgb(87, 85, 85); /* Color del texto en el enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.logout a:hover {
+  color: rgba(45,33,173,1);
+}
+
+
 
 /* CHATS */
 
@@ -149,7 +166,7 @@ body.active .wrapper .section{
     width: 400px;
     padding: 10px;
     border-right: 1px solid #a6a6a6;
-    background-color: rgba(47,186,232,1);
+    background-color: rgba(123,211,240,1);
     border-radius: 2%;
 }
 
@@ -183,7 +200,7 @@ body.active .wrapper .section{
     overflow-y: auto;
     background-color: #fff;
     padding: 10px;
-    border: 3px solid rgb(61, 188, 243);
+    border: 3px solid rgba(123,211,240,1);
     border-radius: 5px;
 }
 
