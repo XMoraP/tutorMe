@@ -33,7 +33,7 @@ body{
   display: block;
   width: 100px;
   height: 100px;
-    border-radius: 50%;
+  border-radius: 50%;
   margin: 0 auto;
 }
 
@@ -106,7 +106,6 @@ body{
 }
 
  .wrapper .section .container{
-  margin: 30px;
   background: #fff;
   padding: 50px;
   line-height: 28px;
@@ -121,14 +120,31 @@ body.active .wrapper .section{
   width: 100%;
 }
 
+.logout {
+  position: absolute;
+  bottom: 60px; /* Ajusta esta propiedad según tu preferencia */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.logout a {
+  color: rgb(87, 85, 85); /* Color del texto en el enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.logout a:hover {
+  color: rgba(45,33,173,1);
+}
+
 
 /* CHATS */
 
 .container-chat {
+    padding: 50px;
     max-width: 1300px; /* Ajusta el ancho máximo del contenedor */
     max-height: 700px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+   
     border-radius: 10px;
     background-color: #f9f9f9;
     font-size: 18px; /* Aumenta el tamaño de la fuente */
@@ -149,7 +165,7 @@ body.active .wrapper .section{
     width: 400px;
     padding: 10px;
     border-right: 1px solid #a6a6a6;
-    background-color: rgba(47,186,232,1);
+    background-color: rgba(123,211,240,1);
     border-radius: 2%;
 }
 
@@ -176,6 +192,13 @@ body.active .wrapper .section{
    
 }
 
+.chat-profile-image {
+  width: 50px; /* Ajusta el tamaño según tus preferencias */
+  height: 50px; /* Ajusta el tamaño según tus preferencias */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 /* Área de mensajes */
 .chat-messages {
     flex-grow: 1;
@@ -183,7 +206,7 @@ body.active .wrapper .section{
     overflow-y: auto;
     background-color: #fff;
     padding: 10px;
-    border: 3px solid rgb(61, 188, 243);
+    border: 3px solid rgba(123,211,240,1);
     border-radius: 5px;
 }
 
@@ -235,6 +258,13 @@ body.active .wrapper .section{
     border-radius: 10px;
     cursor: pointer;
 }
+
+/* Perfil */
+
+
+
+
+
 
 /* Media queries para responsive design */
 @media screen and (max-width: 480px) {

@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
 /* Calendario */
 const daysTag = document.querySelector(".days"),
 currentDate = document.querySelector(".current-date"),
@@ -135,5 +136,15 @@ document.querySelector('#push').onclick = function(){
         }
     }
 }
+
+/*Ventana Perfil*/
+
+document.getElementById('validationCustom06').addEventListener('change', function() {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById('preview').setAttribute('src', e.target.result);
+    }
+    reader.readAsDataURL(this.files[0]);
+});
 
 

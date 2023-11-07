@@ -18,17 +18,7 @@ section {
     background: #060f3b;
 }
 
-/* Updated styles for the sections */
-section {
-    min-height: calc(33.33vh - 60px); /* Approximately 1/3 of the viewport height */
-}
-
-.services-section,
-.universities-section {
-    min-height: calc(33.33vh - 60px); /* Approximately 1/3 of the viewport height */
-    max-width: 100%; /* Set the maximum width to 60% of the page */
-    margin: 0 auto; /* Center the sections horizontally */
-}
+/* Styles for the sections */
 
 header {
     position: relative;
@@ -130,185 +120,62 @@ header .navigation a:hover {
     float:inline-start;
 }
 
-/* Styles for the Services section */
+
+/* Styles for the Universities section */
+.universities-section {
+    background-color: #060f3b; /* Choose a background color */
+    padding: 40px 0;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image {
+    flex: 1;
+    max-width: 48%; /* Adjust as needed to fit 2 items in a row */
+    margin: 10px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Styles for the  Services section */
 .services-section {
-    background-color: whitesmoke;
-    padding: 60px 10%;
+    background-color: #060f3b; /* Choose a background color */
+    padding: 40px 0;
 }
 
 .service-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.service-container h3 {
-    color: #000;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-
-.service-images {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
-    padding: 0 10%;
+    flex-wrap: wrap;
 }
 
 .service-item {
     flex: 1;
-    max-width: 200px;
+    max-width: 23%; /* Adjust as needed to fit 4 items in a row */
     text-align: center;
-    margin: 0 10px;
+    margin: 10px;
 }
 
 .service-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
-
-/* Styles for the Universities section */
-.universities-section {
-    background-color: #060f3b;
-    padding: 60px 10%;
-}
-
-.container.universities {
-    max-width: 100%;
-}
-
-.container.universities h3 {
-    color: #000;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-
-.containers {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* Allow the "containers" to grow and take up available space */
-    max-width: 50%; /* Adjusted maximum width for "containers" */
-    padding-left: 20px; /* Added padding to separate "info" and "containers" */
-}
-
-.container {
-    align-self: flex-start; /* Updated alignment */
-    flex-grow: 1;
-    background-color: whitesmoke;
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-}
-
-.container h3 {
-    font-size: 30px;
+.service-item p {
+    margin-top: 10px;
     font-weight: 600;
-    color: #fff;
-    margin-bottom: 10px;
-    padding-bottom: 30px;
-    padding-top: 10px;
 }
 
-.container.universities h3 {
-    text-align: center; /* Center the text horizontally */
-    margin: 0 auto; /* Center the text vertically using margin */
-    font-family: "Monserrat", sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
 
-.container.universities {
-    flex: 1; /* Allow the container to grow and take available space */
-    max-width: 50%; /* Set the maximum width to 40% of the page */
-    align-self: center;
-}
-
-.container.universities .image-grid {
-    display: grid; /* Use a CSS grid layout */
-    grid-template-columns: repeat(4, 1fr); /* Four columns */
-    gap: 10px;
-    max-width: 100%;
-}
-
-.container.universities .image {
-    flex: 1; /* Allow each image to fill its grid cell */
-    padding-left: 70px;
-}
-
-.container.universities .image img {
-    width: 50%;
-    height: auto;
-}
-
-/* Styles for the new Services section */
-.services-section {
-    background-color: #060f3b;
-    padding: 60px 10%;
-}
-
-.service-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.service-container h3 {
-    color: whitesmoke;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-
-.service-icons {
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    padding: 0 10%;
-}
-
-.service-item {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 0 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    max-width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.service-item i {
-    font-size: 50px;
-    color: #7787de;
-    margin-bottom: 10px;
-}
-
+/*BOTON*/
 button {
     margin-left: 20px;
     padding: 10px 25px;
