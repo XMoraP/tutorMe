@@ -11,7 +11,7 @@ let submitBtn = document.getElementById("submitBtn");
 signupBtn.onclick = function () {
 
     nameField.style.maxHeight = "60px";
-    title.innerHTML = "Sign Up";
+    title.innerHTML = "Regístrate";
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
 
@@ -19,7 +19,7 @@ signupBtn.onclick = function () {
 
 signinBtn.onclick = function () {
     nameField.style.maxHeight = "0";
-    title.innerHTML = "Sign In";
+    title.innerHTML = "Iniciar Sesión";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
 };

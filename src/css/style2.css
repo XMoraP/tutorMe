@@ -31,8 +31,9 @@
 .form-box h1{
     font-size: 30px;
     margin-bottom: 60px;
-    color: rgba(45,33,175,255);
+    color: #18116d;
     position: relative;
+    text-transform: uppercase;
 }
 
 .form-box h1::after{
@@ -89,7 +90,7 @@ form p a{
 }
 
 .btn-field button:hover {
-    background: rgba(45,33,175,0.8); /* Change the background color on hover */
+    background: #4b439d91; /* Change the background color on hover */
     color: #fff; /* Change the text color on hover */
 }
 
@@ -110,8 +111,8 @@ form p a{
     margin: 0 auto; /* Center the button horizontally */
     display: block; /* Make the button a block-level element */
     margin-top: 10px;
-    background: #2ab9e7;
-    color: #fff;
+    background: #ffeb00;
+    color: #000;
 
 }
 
@@ -131,6 +132,7 @@ form p a{
 }
 
 .btn-field button#submitBtn:hover {
-    background: #1f85a7; /* Change the background color on hover */
+    background: #ADD8E6; /* Change the background color on hover */
     color: #fff; /* Change the text color on hover */
 }
+
