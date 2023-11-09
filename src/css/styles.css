@@ -22,6 +22,7 @@ body{
   height: 100%;
   padding: 20px 0;
   transition: all 0.5s ease;
+  box-shadow: -4px -4px 30px rgba(3, 8, 129, 0.505)
 }
 
 .wrapper .sidebar .profile{
@@ -101,7 +102,7 @@ body{
   color: #f4fbff;
 }
 
-.wrapper .section .top_navbar .hamburger a:hover{
+.wrapper .section .top_navbar a:hover{
   color: #a2ecff;
 }
 
@@ -259,7 +260,63 @@ body.active .wrapper .section{
     cursor: pointer;
 }
 
-/* Perfil */
+/* PERFIL */
+/* Profile Card */
+main {
+  width: 340px;
+  overflow: hidden;
+  background-color: #fdfcfc;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  border-radius: 7px;
+  box-shadow: -4px -4px 20px rgba(169, 168, 168, 0.505);
+  margin: 50px auto;
+
+}
+
+
+.top-card {
+  width: 100%;
+  
+}
+
+.top-card img {
+  width: 100%;
+}
+
+
+
+h1 {
+  font-size: 22px;
+  color: #000;
+  font-weight: 600;
+  margin: 12px 0;
+  text-align: center;
+
+}
+
+.middle-card, footer {
+  margin: 5px 25px;
+}
+
+.middle-card {
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+
+}
+
+.container-fluid{
+  border: 2px solid #ccc; 
+  padding: 20px; 
+  box-shadow: -4px -4px 20px rgba(169, 168, 168, 0.505);
+}
+
+
+
 
 
 
@@ -434,5 +491,6 @@ header .current-date{
 }
 /* ...otros estilos... */
 
-/* */
+/* Reseñas */
 .link-grey { color: #aaa; } .link-grey:hover { color: #00913b; }
+    

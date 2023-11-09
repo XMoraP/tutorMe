@@ -1,3 +1,5 @@
+
+
 /* Ventana CHATS */
 var hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function(){
@@ -139,12 +141,66 @@ document.querySelector('#push').onclick = function(){
 
 /*Ventana Perfil*/
 
-document.getElementById('validationCustom06').addEventListener('change', function() {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-        document.getElementById('preview').setAttribute('src', e.target.result);
-    }
-    reader.readAsDataURL(this.files[0]);
+document.querySelectorAll('.guardar').forEach(function(button) {
+    button.addEventListener('click', function() {
+        Swal.fire({
+            title: '¡Actualizado!',
+            text: 'Los cambios se han guardado exitosamente',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    });
 });
+
+document.getElementById('altaTutor').addEventListener('click', function () {
+    Swal.fire({
+        title: "¿Estás seguro?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, deseo darme de alta!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Actualizado!",
+                text: "Tu estatus ha sido modificado",
+                icon: "success"
+            }).then(() => {
+                window.open('profileTutor.html', '_blank');
+            });
+        }
+    });
+});
+
+document.getElementById('bajaTutor').addEventListener('click', function () {
+    Swal.fire({
+        title: "¿Estás seguro?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, deseo darme de baja!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Actualizado!",
+                text: "Tu estatus ha sido modificado",
+                icon: "success"
+            }).then(() => {
+                window.open('profile.html', '_blank');
+            });
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
 
 
