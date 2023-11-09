@@ -8,101 +8,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/TutorMeLogo.png" type="image/png">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link to Bootstrap CSS via CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+
 </head>
 <body>
     <section>
         <input type="checkbox" id="check">
         <header>
+            <img src="images/TutorMeLogo.png" alt="Your Logo" class="tutorme-logo">
             <h2><a href="#" class="logo">TutorMe</a></h2>
             <div class="navigation">
-                <a href="#services">Services</a>
-                <a href="#universities">About us</a>
-                <a href="#contact">Contact</a>
+                <a href="#tutores">Servicios</a>
+                <a href="#servicios">Sobre Nosotros</a>
+                <a href="#contact">Contacto</a>
             </div>
-            <a class="cta" href="#"><button>Log In</button></a>
-            <label for="check">
-                <i class="fas fa-bars menu-btn"></i>
-                <i class="fas fa-times close-btn"></i>
-            </label>
+            <a class="cta" href="registration.html"><button>Iniciar Sesión</button></a>
         </header>
         <div class="content">
             <div class="info">
-                <h2>Your Platform, <br><span>For Students</span></h2>
-                <p>Where students get together for a bigger, better community</p>
-                <a href="#" class="info-btn">Join us</a>
+                <h2>Tu Plataforma, <br><span>Para Estudiantes</span></h2>
+                <p>Donde estudiantes y profesores se juntan para una comunidad mejor</p>
+                <a href="#" class="info-btn">Únete</a>
             </div>
-            <img src="images/student.png" alt="Student Image" class="student-image">
+            <img src="images/students_bg.png" alt="Student Image" class="student-image">
         </div>
     </section>
 
-    <section class="services-section" id="services">
-        <div class="service-container">
-            <h3>Services</h3>
-            <div class="service-images">
-                <div class="service-item">
-                    <img src="/src/images/service1.png" alt="Service 1">
-                    <p>Study Better</p>
-                </div>
-                <div class="service-item">
-                    <img src="/src/images/service2.png" alt="Service 2">
-                    <p>Find your peers</p>
-                </div>
-                <div class="service-item">
-                    <img src="/src/images/service3.png" alt="Service 3">
-                    <p>Organise your classes</p>
-                </div>
-                <div class="service-item">
-                    <img src="/src/images/service4.png" alt="Service 4">
-                    <p>Connect with others</p>
-                </div>
+    <br>  
+    <br>   
+    <br> 
+
+    <div class="container" id="servicios">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <img src="/src/images/service1.png" class="card-img-top" alt="Image 1">
+              <div class="card-body">
+                <h5 class="custom-card-title">Lleva tus estudios al siguiente nivel</h5>
+                <p class="custom-card-text">Accede a todos nuestros recurzos y alcanza tu potencial.</p>
+              </div>
             </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <img src="/src/images/service2.png" class="card-img-top" alt="Image 2">
+              <div class="card-body">
+                <h5 class="custom-card-title">Conecta con otros</h5>
+                <p class="custom-card-text">Encuentra a otros estudiantes de tu escuela y de otras y forma un grupo de trabajo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <img src="/src/images/service3.png" class="card-img-top" alt="Image 3">
+              <div class="card-body">
+                <h5 class="custom-card-title">Disfruta de todos nuestros recursos</h5>
+                <p class="custom-card-text">Compartir documentos, servicio de mensajería, eventos, y mucho más...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <img src="/src/images/service4.png" class="card-img-top" alt="Image 4">
+              <div class="card-body">
+                <h5 class="custom-card-title">Todo lo que necesitas, en un solo lugar</h5>
+                <p class="custom-card-text">Organiza tu vida y tus estudios con todas las posibilidades que TutorMe ofrece.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <section class="titulo-seccion">
+        <h2>tutores a tu disposición, y muchos más</h2>
+      </section>
+
+      <div class="team-area" id="tutores">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="single-team">
+                <div class="img-area">
+                  <img src="/src/images/Einstein.png" class="img-responsive" alt="">
+                  <div class="social">
+                    <ul class="list-inline">
+                      <h3 style="color: grey;">"Le cambió la vida a todos mis alumnos"</h3>
+                    </ul>
+                  </div>
+                </div>
+                <div class="img-text">
+                  <h4 class="custom-card-title">Albert Einstein</h4>
+                  <p class="custom-card-text">Tutor en Física</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="single-team">
+                <div class="img-area">
+                  <img src="/src/images/Turing.png" class="img-responsive" alt="">
+                  <div class="social">
+                    <ul class="list-inline">
+                      <h3 style="color: grey;">"La plataforma perfecta"</h3>
+                    </ul>
+                  </div>
+                </div>
+                <div class="img-text">
+                  <h4 class="custom-card-title">Alan Turing</h4>
+                  <p class="custom-card-text">Tutor en Inteligencia Artifial</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="single-team">
+                <div class="img-area">
+                  <img src="/src/images/vneuman.png" class="img-responsive" alt="">
+                  <div class="social">
+                    <ul class="list-inline">
+                      <h3 style="color: grey;">"Un cambio rompedor en el mundo del estudio"</h3>
+                    </ul>
+                  </div>
+                </div>
+                <div class="img-text">
+                  <h4 class="custom-card-title">John Von Neumann</h4>
+                  <p class="custom-card-text">Tutor en Estadística</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <br>
+    <br><br>
+
+    <section class="titulo-seccion">
+        <h2>Universidades colaboradoras</h2>
     </section>
 
-    <section class="universities-section" id="universities">
-        <div class="container universities">
-            <h3>our universities</h3>
-            <div class="image-grid">
-                <!-- First Row of Images -->
-                <div class="image">
-                    <img src="/src/images/univ_carlosiii.png" alt="University 1">
-                </div>
-                <div class="image">
-                    <img src="/src/images/univ_ceu.png" alt="University 2">
-                </div>
-                <div class="image">
-                    <img src="/src/images/univ_complu.png" alt="University 3">
-                </div>
-                <div class="image">
-                    <img src="/src/images/univ_politecnica.png" alt="University 4">
-                </div>
-                <!-- Second Row of Images -->
-                <div class="image">
-                    <img src="/src/images/univ_reyjuancarlos.png" alt="University 5">
-                </div>
-                <div class="image">
-                    <img src="/src/images/univ_comillas.jpg" alt="University 6">
-                </div>
-                <div class="image">
-                    <img src="/src/images/univ_cunef.png" alt="University 7">
-                </div>
-                <div class="image">
-                    <img src="/src/images/univ_navarra.jpeg" alt="University 8">
-                </div>
-            </div>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img src="images/univ_ceu.png" alt="Universidad 1" class="university-image">
+          </div>
+          <div class="col-sm">
+            <img src="images/univ_navarra.jpeg" alt="Universidad 2" class="university-image">
+          </div>
+          <div class="col-sm">
+            <img src="images/univ_carlosiii.png" alt="Universidad 3" class="university-image">
+          </div>
+          <div class="col-sm">
+            <img src="images/univ_complu.png" alt="Universidad 4" class="university-image">
+          </div>
         </div>
-    </section>
 
-    <footer>
-        <img src="images/TutorMeLogo.png" alt="Your Logo" class="footer-logo">
-        <div id="contact">
-            <a href="#">Contact Us</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+        <br><br><br>
+        <div class="row">
+            <div class="col-sm">
+              <img src="images/univ_comillas.jpg" alt="Universidad 5" class="university-image">
+            </div>
+            <div class="col-sm">
+              <img src="images/univ_politecnica.png" alt="Universidad 6" class="university-image">
+            </div>
+            <div class="col-sm">
+              <img src="images/univ_reyjuancarlos.png" alt="Universidad 7" class="university-image">
+            </div>
+            <div class="col-sm">
+              <img src="images/univ_cunef.png" alt="Universidad 8" class="university-image">
         </div>
-    </footer>
+        <br><br><br>
+
+
+    </div>
 </body>
+<footer>
+    <img src="images/TutorMeLogo.png" alt="Your Logo" class="tutorme-logo">
+    <div id="contact">
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+    </div>
+</footer>
 </html>
