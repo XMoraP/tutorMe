@@ -97,13 +97,76 @@ body{
  
 }
 
+.wrapper .section .top_navbar .hamburger .chat .user_icon{
+  margin-left: auto;
+  
+} 
+
 .wrapper .section .top_navbar .hamburger a{
   font-size: 28px;
   color: #f4fbff;
 }
 
+
+.wrapper .section .top_navbar .filter{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+.filter #buscador{
+  width: 600px; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.filter-button {
+  background: rgba(45,33,173,1); 
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.filter-button:hover {
+  background: #0056b3; 
+}
+
+
+.wrapper .section .top_navbar .chat a{
+  font-size: 28px;
+  color: #f4fbff;
+  margin-right: 13px;
+}
+
 .wrapper .section .top_navbar a:hover{
   color: #a2ecff;
+}
+
+.user_icon img {
+  width: 45px; 
+  height: 45px; 
+  margin-right: 13px;
+}
+
+.logo_icon img {
+  width: 43px; 
+  height: 43px; 
+  margin-right: 5px;
+  border: 2px solid white; 
+  border-radius: 50%;
+}
+
+.text_logo p {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff; 
 }
 
  .wrapper .section .container{
@@ -123,14 +186,14 @@ body.active .wrapper .section{
 
 .logout {
   position: absolute;
-  bottom: 60px; /* Ajusta esta propiedad según tu preferencia */
+  bottom: 60px; 
   left: 0;
   width: 100%;
   text-align: center;
 }
 .logout a {
-  color: rgb(87, 85, 85); /* Color del texto en el enlace */
-  text-decoration: none; /* Quita el subrayado del enlace */
+  color: rgb(87, 85, 85); 
+  text-decoration: none; 
 }
 
 .logout a:hover {
@@ -142,13 +205,13 @@ body.active .wrapper .section{
 
 .container-chat {
     padding: 50px;
-    max-width: 1300px; /* Ajusta el ancho máximo del contenedor */
+    max-width: 1300px; 
     max-height: 700px;
     margin: 0 auto;
    
     border-radius: 10px;
     background-color: #f9f9f9;
-    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    font-size: 18px; 
 }
 
 .container-chat h2 {
@@ -162,7 +225,7 @@ body.active .wrapper .section{
 
 /* Lista de chats */
 .chat-list {
-    max-width: 250px; /* Aumenta el ancho máximo de la lista de chats */
+    max-width: 250px; 
     width: 400px;
     padding: 10px;
     border-right: 1px solid #a6a6a6;
@@ -184,7 +247,7 @@ body.active .wrapper .section{
     padding: 8px;
     border-radius: 5px;
     margin-bottom: 5px;
-    font-size: 16px; /* Ajusta el tamaño de la fuente para los elementos de la lista de chats */
+    font-size: 16px; 
 }
 
 .chat-list li.active {
@@ -194,8 +257,8 @@ body.active .wrapper .section{
 }
 
 .chat-profile-image {
-  width: 50px; /* Ajusta el tamaño según tus preferencias */
-  height: 50px; /* Ajusta el tamaño según tus preferencias */
+  width: 50px; 
+  height: 50px; 
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -203,7 +266,7 @@ body.active .wrapper .section{
 /* Área de mensajes */
 .chat-messages {
     flex-grow: 1;
-    height: 500px; /* Aumenta la altura del área de mensajes */
+    height: 500px; 
     overflow-y: auto;
     background-color: #fff;
     padding: 10px;
@@ -216,7 +279,7 @@ body.active .wrapper .section{
     padding: 8px 12px;
     border-radius: 8px;
     max-width: 80%;
-    font-size: 16px; /* Ajusta el tamaño de la fuente para los mensajes */
+    font-size: 16px; 
 }
 
 .message.received {
@@ -228,31 +291,31 @@ body.active .wrapper .section{
     color: #fff;
     align-self: flex-end;
     display: block;
-    width: fit-content; /* Cambio a fit-content */
+    width: fit-content; 
 }
 
-/* Cuadro de entrada de texto y botón de enviar */
+
 .chat-input-container {
     display: flex;
     align-items: center;
     background-color: #e3e2e2;
-    padding: 20px; /* Aumenta el relleno del contenedor */
+    padding: 20px; 
     border-top: 1px solid #ccc;
     border-radius: 2%;
 }
 
 .chat-input-container input {
     flex-grow: 1;
-    padding: 10px; /* Aumenta el relleno del input */
+    padding: 10px; 
     border: none;
     border-radius: 10px;
-    font-size: 18px; /* Aumenta el tamaño de la fuente del input */
+    font-size: 18px; 
     outline: none;
 }
 
 .chat-input-container button {
-    font-size: 18px; /* Aumenta el tamaño de la fuente del botón */
-    padding: 10px 20px; /* Aumenta el relleno del botón */
+    font-size: 18px; 
+    padding: 10px 20px; 
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -334,17 +397,17 @@ footer {
     }
 
     .chat-input-container {
-        padding: 10px; /* Ajusta el relleno del contenedor en pantallas pequeñas */
+        padding: 10px;
     }
 
     .chat-input-container input {
-        padding: 8px; /* Ajusta el relleno del input en pantallas pequeñas */
-        font-size: 14px; /* Ajusta el tamaño de la fuente del input en pantallas pequeñas */
+        padding: 8px; 
+        font-size: 14px; 
     }
 
     .chat-input-container button {
-        font-size: 14px; /* Ajusta el tamaño de la fuente del botón en pantallas pequeñas */
-        padding: 8px 16px; /* Ajusta el relleno del botón en pantallas pequeñas */
+        font-size: 14px; 
+        padding: 8px 16px; 
     }
 }
 
