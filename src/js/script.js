@@ -140,15 +140,16 @@ function tutor(){
         title: "¿Estás seguro?",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
+        confirmButtonColor: "#130A76",
+        cancelButtonColor: "#808080",
         confirmButtonText: "Sí, deseo darme de alta!"
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
                 title: "Actualizado!",
                 text: "Tu estatus ha sido modificado",
-                icon: "success"
+                icon: "success",
+                confirmButtonColor:  "#130A76"
             }).then(() => {
                 window.location.href = 'profileTutor.html';
             });
@@ -161,15 +162,16 @@ function noTutor() {
         title: "¿Estás seguro?",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
+        confirmButtonColor: "#130A76",
+        cancelButtonColor: "##808080",
         confirmButtonText: "Sí, deseo darme de baja!"
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
                 title: "Actualizado!",
                 text: "Tu estatus ha sido modificado",
-                icon: "success"
+                icon: "success",
+                confirmButtonColor:  "#130A76"
             }).then(() => {
                 window.location.href = 'profile.html';
             });
@@ -182,9 +184,13 @@ function showAlert() {
       title: '¡Actualizado!',
       text: 'Los cambios se han guardado exitosamente',
       icon: 'success',
-      confirmButtonText: 'OK'
+      confirmButtonText: 'OK',
+      confirmButtonColor:  "#130A76"
     });
   }
+
+
+
 
 
 

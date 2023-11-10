@@ -90,7 +90,7 @@ body {
 }
 
 .wrapper .section .top_navbar {
-  background: rgba(19, 10, 118, 1);
+  background: #28b3ce;
   height: 50px;
   display: flex;
   align-items: center;
@@ -146,7 +146,7 @@ body {
 }
 
 .wrapper .section .top_navbar a:hover {
-  color: #a2ecff;
+  color: rgba(45, 33, 173, 1);;
 }
 
 .user_icon img {
