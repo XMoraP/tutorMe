@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -7,256 +8,272 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>profileTutor</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--Alerts-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>
     </style>
 </head>
+
 <body>
 
-   <!-- Top bar-->
+    <!-- Top bar-->
     <div class="wrapper">
-       <div class="section">
-    <div class="top_navbar">
-        <div class="logo_icon">
-            <img src="images/TutorMeLogo.png" alt="Usuario">
-          </div>
-          <div class="text_logo">
-            <p>TutorMe</p>
-          </div>
-      <div class="filter">
-        <input id="buscador" type="text" placeholder="Buscar...">
-        <button class="filter-button">
-            <i class="fas fa-search"></i>
-          </button>
-      </div> 
-      <div class="user_icon">
-        <img src="images/Turing.png" alt="Usuario">
-      </div>
-      <div class="chat">
-        <a href="#">
-          <i class="fas fa-comment"></i>
-        </a>
-      </div>
-      <div class="hamburger">
-        <a href="#">
-          <i class="fas fa-bars"></i>
-        </a>
-      </div>
-    </div>
-
-<!--Porfile card section -->
-<main>
-    <section class="top-card">
-        <img src="images/Turing.png" alt="user picture">
-  </section>
-  <section class="middle-card">
-    <h1>Alan Turing</h1>
-    <span>Status: Tutor<br></span>
-    <span>Email: alant@gmail.com<br></span>
-  </section> 
-  <br>
-  <footer>   
-        <button class="btn btn-primary" type="button">Ver reseñas</button>
-    </footer>
-    <br>
-</main>
-
- <!-- Profile Sections -->
-<div class="container">
-    <div class="container-fluid">
-        <h2>Perfil Tutor</h2>
-        <div class="container">
-            <h4>Información de usuario</h4>
-            <br>
-            <form class="row g-3 needs-validation" novalidate>
-                <div class="col-md-4">
-                  <label for="validationCustom01" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="validationCustom01" value="Alan" required>                  
+        <div class="section">
+            <div class="top_navbar">
+                <div class="logo_icon">
+                    <img src="images/TutorMeLogo.png" alt="Usuario">
                 </div>
-                <div class="col-md-4">
-                  <label for="validationCustom02" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="validationCustom02" value="Turing" required>
+                <div class="text_logo">
+                    <p>TutorMe</p>
                 </div>
-                <div class="col-md-4">
-                  <label for="validationCustomUsername" class="form-label">Email</label>
-                  <div class="input-group has-validation">
-                      <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="alant@gmail.com" required>
-                  </div>
-              </div>
-                <div class="col-md-4">
-                  <label for="validationCustomUsername" class="form-label">Nombre Usuario</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="AlanT" required>
-                  </div>
+                <div class="filter">
+                    <input id="buscador" type="text" placeholder="Buscar...">
+                    <button class="filter-button">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
-                <div class="col-md-4">
-                  <label for="validationCustom03" class="form-label">Ciudad</label>
-                  <input type="text" class="form-control" id="validationCustom03" value="Madrid">
+                <div class="user_icon">
+                    <img src="images/Turing.png" alt="Usuario">
                 </div>
-                <div class="col-md-4">
-                  <label for="validationCustom04" class="form-label">Universidad</label>
-                  <select class="form-select" id="validationCustom04" required>
-                      <option selected disabled value="">Elige...</option>
-                      <option value="option1">Ceu San Pablo</option>
-                      <option value="option2">UCLA</option>
-                      <option value="option3">Harvard</option>
-                  </select>
-              </div>
-                <div class="col-md-5">
-                  <label for="validationCustom05" class="form-label">Grado</label>
-                  <input type="text" class="form-control" id="validationCustom05">
+                <div class="chat">
+                    <a href="#">
+                        <i class="fas fa-comment"></i>
+                    </a>
                 </div>
-                <div class="col-12">
-                    <button class="btn btn-primary guardar" type="button">Guardar</button>
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
                 </div>
-              </form>
-              <br>
-              <br>
-
-              <h4>Pago</h4>
-              <br>
-              <form class="row g-3 needs-validation" novalidate>
-                  <div class="col-md-4">
-                      <label for="validationCustom01" class="form-label">Número de tarjeta</label>
-                      <input type="text" class="form-control" id="validationCustom01" value="4111 1111 1111 1111" placeholder="Ingrese el número de la tarjeta" required>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="validationCustom02" class="form-label">Nombre en la tarjeta</label>
-                      <input type="text" class="form-control" id="validationCustom02" value="Alan Turing" placeholder="Ingre el nombre que aparece en la tarjeta" required>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="validationCustom03" class="form-label">Fecha de expiración</label>
-                      <input type="text" class="form-control" id="validationCustom03" value="12/23" placeholder="Ingrese la fecha de expiración" required>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="validationCustom04" class="form-label">CVV</label>
-                      <input type="text" class="form-control" id="validationCustom04" value="123" required>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary guardar" type="button">Guardar</button>
-                  </div>
-              </form>
-              <br>
-              <br>
-              <h4>Editar Contraseña</h4>
-              <br>
-              <form class="row g-3 needs-validation" novalidate>
-                  <div class="col-md-4">
-                      <label for="validationCustom01" class="form-label">Contraseña actual</label>
-                      <div class="input-group">
-                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                          <input type="password" class="form-control" id="validationCustom01" placeholder="Ingrese su contraseña actual">
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="validationCustom02" class="form-label">Nueva Contraseña</label>
-                      <div class="input-group">
-                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                          <input type="password" class="form-control" id="validationCustom02" placeholder="Ingrese su nueva contraseña" required>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <label for="validationCustom03" class="form-label">Confirmar Nueva Contraseña</label>
-                      <div class="input-group">
-                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                          <input type="password" class="form-control" id="validationCustom03" placeholder="Ingrese su nueva contraseña" required>
-                      </div>
-                  </div>   
-                  <div class="col-12">
-                    <button class="btn btn-primary guardar" type="button">Guardar</button>
-                </div>
-              </form>            
-              <br>
-              <br>
-              <h4>Información de tutor</h4>
-              <br>
-              <form class="row g-3 needs-validation" novalidate>
-                  <div class="col-md-4">
-                      <label for="validationCustom01" class="form-label">Asignaturas a impartir</label>
-                      <input type="text" class="form-control" id="validationCustom01" value="Física" placeholder="Ingrese asignaturasa impartir" required>          
-                  </div>
-                  <div class="col-md-4">
-                      <label for="validationCustom02" class="form-label">Tarifa/hora</label>
-                      <input type="text" class="form-control" id="validationCustom02" pattern="[0-9]+" title="Por favor, ingresa solo números" value="10 $" placeholder="Ingrese el precio por hora" required>                    
-                  </div>
-                  <div class="col-md-4">
-                      <label for="validationCustomUsername" class="form-label">Contraseña</label>
-                      <div class="input-group has-validation">
-                          <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-lock"></i></span>
-                          <input type="password" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                          
-                      </div>
-                  </div>
-                   <br>
-                  <div class="col-12 d-flex justify-content-between mt-3">
-                    <button class="btn btn-primary guardar" type="button">Guardar</button>
-                    <button class="btn btn-danger" type="button" id="bajaTutor">Baja tutor</button>                    
-                  </div>
-              </form>
-                               
-        </div>
-    </div>
-</div>     
-    <!--Side Bar-->
-  <div>
-        <div class="sidebar">
-            <div class="profile">
-                <img src="images/Turing.png" alt="profile_picture">
-            <h3>Alan Turing</h3>
             </div>
-            <ul>
-                <li>
-                    <a href="dashboard.html">
-                        <span class="icon"><i class="fas fa-home"></i></span>
-                        <span class="item">Inicio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="active">
-                        <span class="icon"><i class="fas fa-user"></i></span>
-                        <span class="item">Perfil</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="tutors.html">
-                        <span class="icon"><i class="fas fa-graduation-cap"></i></span>
-                        <span class="item">Tutores</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="files.html">
-                        <span class="icon"><i class="fas fa-file"></i></span>
-                        <span class="item">Documentos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="chat.html">
-                        <span class="icon"><i class="fas fa-comment"></i></span>
-                        <span class="item">Chat</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="tutelados.html">
-                        <span class="icon"><i class="fas fa-user-graduate"></i></span>
-                        <span class="item">Tutelados</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="logout">
-                <a href="index.html">
-                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
-                    <span class="item">Salir</span>
-                </a>
-            </div>
-        </div>       
-    </div>
 
-    <script src="js/script.js"></script>
-  <!--Alerts-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+            <!--Porfile card section -->
+            <main>
+                <section class="top-card">
+                    <img src="images/Turing.png" alt="user picture">
+                </section>
+                <section class="middle-card">
+                    <h1>Alan Turing</h1>
+                    <span>Status: Tutor<br></span>
+                    <span>Email: alant@gmail.com<br></span>
+                </section>
+                <br>
+                <footer>
+                    <button class="btn btn-primary" type="button">Ver reseñas</button>
+                </footer>
+                <br>
+            </main>
+
+            <!-- Profile Sections -->
+            <div class="container">
+                <div class="container-fluid">
+                    <h2>Perfil Tutor</h2>
+                    <div class="container">
+                        <h4>Información de usuario</h4>
+                        <br>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="Alan" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="Turing" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label">Email</label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" value="alant@gmail.com" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label">Nombre Usuario</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" value="AlanT" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom03" class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" id="validationCustom03" value="Madrid">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom04" class="form-label">Universidad</label>
+                                <select class="form-select" id="validationCustom04" required>
+                                    <option selected disabled value="">Elige...</option>
+                                    <option value="option1">Ceu San Pablo</option>
+                                    <option value="option2">UCLA</option>
+                                    <option value="option3">Harvard</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="validationCustom05" class="form-label">Grado</label>
+                                <input type="text" class="form-control" id="validationCustom05">
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="button" onclick="showAlert()">Guardar</button>
+                            </div>
+                        </form>
+                        <br>
+                        <br>
+
+                        <h4>Pago</h4>
+                        <br>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Número de tarjeta</label>
+                                <input type="text" class="form-control" id="validationCustom01"
+                                    value="4111 1111 1111 1111" placeholder="Ingrese el número de la tarjeta" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Nombre en la tarjeta</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="Alan Turing"
+                                    placeholder="Ingre el nombre que aparece en la tarjeta" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom03" class="form-label">Fecha de expiración</label>
+                                <input type="text" class="form-control" id="validationCustom03" value="12/23"
+                                    placeholder="Ingrese la fecha de expiración" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom04" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="validationCustom04" value="123" required>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="button" onclick="showAlert()">Guardar</button>
+                            </div>
+                        </form>
+                        <br>
+                        <br>
+                        <h4>Editar Contraseña</h4>
+                        <br>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Contraseña actual</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="validationCustom01"
+                                        placeholder="Ingrese su contraseña actual">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Nueva Contraseña</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="validationCustom02"
+                                        placeholder="Ingrese su nueva contraseña" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom03" class="form-label">Confirmar Nueva Contraseña</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="validationCustom03"
+                                        placeholder="Ingrese su nueva contraseña" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="button" onclick="showAlert()">Guardar</button>
+                            </div>
+                        </form>
+                        <br>
+                        <br>
+                        <h4>Información de tutor</h4>
+                        <br>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Asignaturas a impartir</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="Física"
+                                    placeholder="Ingrese asignaturasa impartir" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Tarifa/hora</label>
+                                <input type="text" class="form-control" id="validationCustom02" pattern="[0-9]+"
+                                    title="Por favor, ingresa solo números" value="10 $"
+                                    placeholder="Ingrese el precio por hora" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label">Contraseña</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i
+                                            class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" required>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12 d-flex justify-content-between mt-3">
+                                <button class="btn btn-primary" type="button" onclick="showAlert()">Guardar</button>
+                                <button class="btn btn-danger" type="button" onclick="noTutor()">Baja tutor</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <!--Side Bar-->
+            <div>
+                <div class="sidebar">
+                    <div class="profile">
+                        <img src="images/Turing.png" alt="profile_picture">
+                        <h3>Alan Turing</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html">
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span class="item">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                <span class="item">Perfil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tutors.html">
+                                <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                                <span class="item">Tutores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="files.html">
+                                <span class="icon"><i class="fas fa-file"></i></span>
+                                <span class="item">Documentos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <span class="icon"><i class="fas fa-comment"></i></span>
+                                <span class="item">Chat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tutelados.html">
+                                <span class="icon"><i class="fas fa-user-graduate"></i></span>
+                                <span class="item">Tutelados</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="logout">
+                        <a href="index.html">
+                            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="item">Salir</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/script.js"></script>
+            <!--Alerts-->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
 </body>
+
 </html>

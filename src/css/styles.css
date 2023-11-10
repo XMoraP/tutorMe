@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-*{
+* {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -9,11 +9,11 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-body{
+body {
   background: #f5f6fa;
 }
 
-.wrapper .sidebar{
+.wrapper .sidebar {
   background: rgb(255, 255, 255);
   position: fixed;
   top: 0;
@@ -25,12 +25,12 @@ body{
   box-shadow: -4px -4px 30px rgba(3, 8, 129, 0.505)
 }
 
-.wrapper .sidebar .profile{
+.wrapper .sidebar .profile {
   margin-bottom: 30px;
   text-align: center;
 }
 
-.wrapper .sidebar .profile img{
+.wrapper .sidebar .profile img {
   display: block;
   width: 100px;
   height: 100px;
@@ -38,85 +38,86 @@ body{
   margin: 0 auto;
 }
 
-.wrapper .sidebar .profile h3{
+.wrapper .sidebar .profile h3 {
   color: #000000;
   margin: 10px 0 5px;
 }
 
-.wrapper .sidebar .profile p{
+.wrapper .sidebar .profile p {
   color: rgb(206, 240, 253);
   font-size: 14px;
 }
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar ul li a {
   display: block;
   padding: 13px 30px;
   border-bottom: 1px solid #ffffff;
   color: rgb(87, 85, 85);
   font-size: 16px;
   position: relative;
+  text-decoration: none;
 }
 
-.wrapper .sidebar ul li a .icon{
+.wrapper .sidebar ul li a .icon {
   color: #dee4ec;
   width: 30px;
   display: inline-block;
 }
 
- 
+
 
 .wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active{
-    color: rgba(45,33,173,1);
+.wrapper .sidebar ul li a.active {
+  color: rgba(45, 33, 173, 1);
 
-  background:white;
+  background: white;
 }
 
 .wrapper .sidebar ul li a:hover .icon,
-.wrapper .sidebar ul li a.active .icon{
-  color: rgba(45,33,173,1);
+.wrapper .sidebar ul li a.active .icon {
+  color: rgba(19, 10, 118, 1);
 }
 
 .wrapper .sidebar ul li a:hover:before,
-.wrapper .sidebar ul li a.active:before{
+.wrapper .sidebar ul li a.active:before {
   display: block;
 }
 
-.wrapper .section{
+.wrapper .section {
   width: calc(100% - 225px);
   margin-left: 225px;
   transition: all 0.5s ease;
 }
 
-.wrapper .section .top_navbar{
-  background: rgba(45,33,173,1);
+.wrapper .section .top_navbar {
+  background: rgba(19, 10, 118, 1);
   height: 50px;
   display: flex;
   align-items: center;
   padding: 0 30px;
- 
+
 }
 
-.wrapper .section .top_navbar .hamburger .chat .user_icon{
+.wrapper .section .top_navbar .hamburger .chat .user_icon {
   margin-left: auto;
-  
-} 
 
-.wrapper .section .top_navbar .hamburger a{
+}
+
+.wrapper .section .top_navbar .hamburger a {
   font-size: 28px;
   color: #f4fbff;
 }
 
 
-.wrapper .section .top_navbar .filter{
+.wrapper .section .top_navbar .filter {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 
 }
 
-.filter #buscador{
-  width: 600px; 
+.filter #buscador {
+  width: 600px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -124,7 +125,7 @@ body{
 }
 
 .filter-button {
-  background: rgba(45,33,173,1); 
+  background: rgba(45, 33, 173, 1);
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -134,31 +135,31 @@ body{
 }
 
 .filter-button:hover {
-  background: #0056b3; 
+  background: #0056b3;
 }
 
 
-.wrapper .section .top_navbar .chat a{
+.wrapper .section .top_navbar .chat a {
   font-size: 28px;
   color: #f4fbff;
   margin-right: 13px;
 }
 
-.wrapper .section .top_navbar a:hover{
+.wrapper .section .top_navbar a:hover {
   color: #a2ecff;
 }
 
 .user_icon img {
-  width: 45px; 
-  height: 45px; 
+  width: 45px;
+  height: 45px;
   margin-right: 13px;
 }
 
 .logo_icon img {
-  width: 43px; 
-  height: 43px; 
+  width: 43px;
+  height: 43px;
   margin-right: 5px;
-  border: 2px solid white; 
+  border: 2px solid white;
   border-radius: 50%;
 }
 
@@ -166,161 +167,162 @@ body{
   margin: 0;
   font-size: 22px;
   font-weight: bold;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
- .wrapper .section .container{
+.wrapper .section .container {
   background: #fff;
   padding: 50px;
   line-height: 28px;
 }
 
-body.active .wrapper .sidebar{
+body.active .wrapper .sidebar {
   left: -225px;
 }
 
-body.active .wrapper .section{
+body.active .wrapper .section {
   margin-left: 0;
   width: 100%;
 }
 
 .logout {
   position: absolute;
-  bottom: 60px; 
+  bottom: 60px;
   left: 0;
   width: 100%;
   text-align: center;
 }
+
 .logout a {
-  color: rgb(87, 85, 85); 
-  text-decoration: none; 
+  color: rgb(87, 85, 85);
+  text-decoration: none;
 }
 
 .logout a:hover {
-  color: rgba(45,33,173,1);
+  color: rgba(45, 33, 173, 1);
 }
 
 
 /* CHATS */
 
 .container-chat {
-    padding: 50px;
-    max-width: 1300px; 
-    max-height: 700px;
-    margin: 0 auto;
-   
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    font-size: 18px; 
+  padding: 50px;
+  max-width: 1300px;
+  max-height: 700px;
+  margin: 0 auto;
+
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-size: 18px;
 }
 
 .container-chat h2 {
-    margin-bottom: 40px; 
-    margin-top: -30px;
+  margin-bottom: 40px;
+  margin-top: -30px;
 }
 
 .chat-content {
-    display: flex;
+  display: flex;
 }
 
 /* Lista de chats */
 .chat-list {
-    max-width: 250px; 
-    width: 400px;
-    padding: 10px;
-    border-right: 1px solid #a6a6a6;
-    background-color: rgba(123,211,240,1);
-    border-radius: 2%;
+  max-width: 250px;
+  width: 400px;
+  padding: 10px;
+  border-right: 1px solid #a6a6a6;
+  background-color: rgba(123, 211, 240, 1);
+  border-radius: 2%;
 }
 
 .chat-list h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .chat-list ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .chat-list li {
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    font-size: 16px; 
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
 .chat-list li.active {
-    background-color: #ffffff;
-    color: #0b0b0b;
-   
+  background-color: #ffffff;
+  color: #0b0b0b;
+
 }
 
 .chat-profile-image {
-  width: 50px; 
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
 /* Área de mensajes */
 .chat-messages {
-    flex-grow: 1;
-    height: 500px; 
-    overflow-y: auto;
-    background-color: #fff;
-    padding: 10px;
-    border: 3px solid rgba(123,211,240,1);
-    border-radius: 5px;
+  flex-grow: 1;
+  height: 500px;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 10px;
+  border: 3px solid rgba(123, 211, 240, 1);
+  border-radius: 5px;
 }
 
 .message {
-    margin: 10px 0;
-    padding: 8px 12px;
-    border-radius: 8px;
-    max-width: 80%;
-    font-size: 16px; 
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 80%;
+  font-size: 16px;
 }
 
 .message.received {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .message.sent {
-    background-color: #007bff;
-    color: #fff;
-    align-self: flex-end;
-    display: block;
-    width: fit-content; 
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  display: block;
+  width: fit-content;
 }
 
 
 .chat-input-container {
-    display: flex;
-    align-items: center;
-    background-color: #e3e2e2;
-    padding: 20px; 
-    border-top: 1px solid #ccc;
-    border-radius: 2%;
+  display: flex;
+  align-items: center;
+  background-color: #e3e2e2;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-radius: 2%;
 }
 
 .chat-input-container input {
-    flex-grow: 1;
-    padding: 10px; 
-    border: none;
-    border-radius: 10px;
-    font-size: 18px; 
-    outline: none;
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  outline: none;
 }
 
 .chat-input-container button {
-    font-size: 18px; 
-    padding: 10px 20px; 
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /* PERFIL */
@@ -341,7 +343,7 @@ main {
 
 .top-card {
   width: 100%;
-  
+
 }
 
 .top-card img {
@@ -358,7 +360,8 @@ h1 {
 
 }
 
-.middle-card, footer {
+.middle-card,
+footer {
   margin: 5px 25px;
 }
 
@@ -371,9 +374,9 @@ footer {
 
 }
 
-.container-fluid{
-  border: 2px solid #ccc; 
-  padding: 20px; 
+.container-fluid {
+  border: 2px solid #ccc;
+  padding: 20px;
   box-shadow: -4px -4px 20px rgba(169, 168, 168, 0.505);
 }
 
@@ -387,56 +390,61 @@ footer {
 
 /* Media queries para responsive design */
 @media screen and (max-width: 480px) {
-    .container-chat {
-        max-width: 100%;
-    }
+  .container-chat {
+    max-width: 100%;
+  }
 
-    .chat-list {
-        max-width: 100%;
-        border-right: none;
-    }
+  .chat-list {
+    max-width: 100%;
+    border-right: none;
+  }
 
-    .chat-input-container {
-        padding: 10px;
-    }
+  .chat-input-container {
+    padding: 10px;
+  }
 
-    .chat-input-container input {
-        padding: 8px; 
-        font-size: 14px; 
-    }
+  .chat-input-container input {
+    padding: 8px;
+    font-size: 14px;
+  }
 
-    .chat-input-container button {
-        font-size: 14px; 
-        padding: 8px 16px; 
-    }
+  .chat-input-container button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
 
 /* calendario */
 
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-.wrapper-calendar{
+
+.wrapper-calendar {
   width: 450px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
-.wrapper-calendar header{
+
+.wrapper-calendar header {
   display: flex;
   align-items: center;
   padding: 25px 30px 10px;
   justify-content: space-between;
 }
-header .icons{
+
+header .icons {
   display: flex;
 }
-header .icons span{
+
+header .icons span {
   height: 38px;
   width: 38px;
   margin: 0 1px;
@@ -448,51 +456,63 @@ header .icons span{
   user-select: none;
   border-radius: 50%;
 }
-.icons span:last-child{
+
+.icons span:last-child {
   margin-right: -10px;
 }
-header .icons span:hover{
+
+header .icons span:hover {
   background: #f2f2f2;
 }
-header .current-date{
+
+header .current-date {
   font-size: 1.45rem;
   font-weight: 500;
 }
-.calendar{
+
+.calendar {
   padding: 20px;
   padding-bottom: 50px;
 }
-.calendar ul{
+
+.calendar ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
 }
-.calendar .days{
+
+.calendar .days {
   margin-bottom: 20px;
 }
-.calendar li{
+
+.calendar li {
   color: #333;
   width: calc(100% / 7);
   font-size: 1.07rem;
 }
-.calendar .weeks li{
+
+.calendar .weeks li {
   font-weight: 500;
   cursor: default;
 }
-.calendar .days li{
+
+.calendar .days li {
   z-index: 1;
   cursor: pointer;
   position: relative;
   margin-top: 30px;
 }
-.days li.inactive{
+
+.days li.inactive {
   color: #aaa;
 }
-.days li.active{
+
+.days li.active {
   color: #fff;
 }
-.days li::before{
+
+.days li::before {
   position: absolute;
   content: "";
   left: 50%;
@@ -503,10 +523,12 @@ header .current-date{
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-.days li.active::before{
+
+.days li.active::before {
   background: #216af0;
 }
-.days li:not(.active):hover::before{
+
+.days li:not(.active):hover::before {
   background: #f2f2f2;
 }
 
@@ -514,13 +536,13 @@ header .current-date{
 
 *,
 *:before,
-*:after{
-    padding: 0;
-    margin: 0px;
-    box-sizing: border-box;
+*:after {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-.container-task{
+.container-task {
   margin: 0px;
   background: #fff;
   padding-top: 0px;
@@ -531,28 +553,36 @@ header .current-date{
   border-radius: 10px;
 }
 
-#newtask{
-    position: relative;
-    padding: 30px 40px;
+#newtask {
+  position: relative;
+  padding: 30px 40px;
 }
-#newtask input{
-    width: 75%;
-    height: 45px;
-    font-family: 'Poppins',sans-serif;
-    font-size: 15px;
-    border: 2px solid #207fdf;
-    padding: 12px;
-    color: #111111;
-    font-weight: 500;
-    position: relative;
-    border-radius: 5px;
+
+#newtask input {
+  width: 75%;
+  height: 45px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border: 2px solid #207fdf;
+  padding: 12px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
 }
-#newtask input:focus{
-    outline: none;
-    border-color: #0d75ec;
+
+#newtask input:focus {
+  outline: none;
+  border-color: #0d75ec;
 }
+
 /* ...otros estilos... */
 
 /* Reseñas */
-.link-grey { color: #aaa; } .link-grey:hover { color: #00913b; }
-    
+.link-grey {
+  color: #aaa;
+}
+
+.link-grey:hover {
+  color: #00913b;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -7,124 +8,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
 
-   <!-- Top bar-->
-   <div class="wrapper">
-    <div class="section">
- <div class="top_navbar">
-     <div class="logo_icon">
-         <img src="images/TutorMeLogo.png" alt="Usuario">
-       </div>
-       <div class="text_logo">
-         <p>TutorMe</p>
-       </div>
-   <div class="filter">
-     <input id="buscador" type="text" placeholder="Buscar...">
-     <button class="filter-button">
-         <i class="fas fa-search"></i>
-       </button>
-   </div> 
-   <div class="user_icon">
-     <img src="images/Turing.png" alt="Usuario">
-   </div>
-   <div class="chat">
-     <a href="#">
-       <i class="fas fa-comment"></i>
-     </a>
-   </div>
-   <div class="hamburger">
-     <a href="#">
-       <i class="fas fa-bars"></i>
-     </a>
-   </div>
- </div>
+    <!-- Top bar-->
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="logo_icon">
+                    <img src="images/TutorMeLogo.png" alt="Usuario">
+                </div>
+                <div class="text_logo">
+                    <p>TutorMe</p>
+                </div>
+                <div class="filter">
+                    <input id="buscador" type="text" placeholder="Buscar...">
+                    <button class="filter-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="user_icon">
+                    <img src="images/Turing.png" alt="Usuario">
+                </div>
+                <div class="chat">
+                    <a href="#">
+                        <i class="fas fa-comment"></i>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
 
-  <!--Chats-->
-<div class="container-chat">
-    <h2>Chats</h2>
-    <!-- Contenedor de la lista de chats y el área de mensajes -->
-    <div class="chat-content">
-        <!-- Lista de chats falsos -->
-        <div class="chat-list">
-            <h4> Lista de chats</h4>
-            <br/>
-            <ul>
-                <li class="active"><img src="images/Gauss.png" alt="Perfil Usuario 1" class="chat-profile-image rounded-circle">Gauss</li>
-                <li><img src="images/Einstein.png" alt="Perfil Usuario 1" class="chat-profile-image rounded-circle">Einstein</li>
-                <li><img src="images/Turing.png" alt="Perfil Usuario 1" class="chat-profile-image rounded-circle">Turing</li>
-                <li><img src="images/tutelado1.jpg" alt="Perfil Usuario 1" class="chat-profile-image rounded-circle">Pablo Martínez</li>
-                <!-- Agrega más chats según sea necesario -->
-            </ul>
-        </div>
+            <!--Chats-->
+            <div class="container-chat">
+                <h2>Chats</h2>
+                <!-- Contenedor de la lista de chats y el área de mensajes -->
+                <div class="chat-content">
+                    <!-- Lista de chats falsos -->
+                    <div class="chat-list">
+                        <h4> Lista de chats</h4>
+                        <br />
+                        <ul>
+                            <li class="active"><img src="images/Gauss.png" alt="Perfil Usuario 1"
+                                    class="chat-profile-image rounded-circle">Gauss</li>
+                            <li><img src="images/Einstein.png" alt="Perfil Usuario 1"
+                                    class="chat-profile-image rounded-circle">Einstein</li>
+                            <li><img src="images/Turing.png" alt="Perfil Usuario 1"
+                                    class="chat-profile-image rounded-circle">Turing</li>
+                            <li><img src="images/tutelado1.jpg" alt="Perfil Usuario 1"
+                                    class="chat-profile-image rounded-circle">Pablo Martínez</li>
+                            <!-- Agrega más chats según sea necesario -->
+                        </ul>
+                    </div>
 
-        <!-- Área de mensajes -->
-        <div class="chat-messages" id="chat-messages">
-            
+                    <!-- Área de mensajes -->
+                    <div class="chat-messages" id="chat-messages">
 
-        </div>
-    </div>
 
-    <!-- Cuadro de entrada de texto y botón de enviar -->
-    <div class="chat-input-container">
-        <input type="text" id="message-input" placeholder="Escribe un mensaje...">
-        <button id="send-button">Enviar</button>
-    </div>
-</div>
+                    </div>
+                </div>
 
- <!--Side Bar-->
- <div>
-    <div class="sidebar">
-        <div class="profile">
-            <img src="images/Turing.png" alt="profile_picture">
-            <h3>Alan Turing</h3>
-        </div>
-        <ul>
-            <li>
-                <a href="dashboard.html">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <span class="item">Inicio</span>
-                </a>
-            </li>
-            <li>
-                <a href="profile.html">
-                    <span class="icon"><i class="fas fa-user"></i></span>
-                    <span class="item">Perfil</span>
-                </a>
-            </li>
-            <li>
-                <a href="tutors.html">
-                    <span class="icon"><i class="fas fa-graduation-cap"></i></span>
-                    <span class="item">Tutores</span>
-                </a>
-            </li>
-            <li>
-                <a href="files.html">
-                    <span class="icon"><i class="fas fa-file"></i></span>
-                    <span class="item">Documentos</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="active">
-                    <span class="icon"><i class="fas fa-comment"></i></span>
-                    <span class="item">Chat</span>
-                </a>
-            </li>
-        </ul>
-        <div class="logout">
-            <a href="index.html">
-                <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
-                <span class="item">Salir</span>
-            </a>
-        </div>
-    </div>
-    
-</div>
-  <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+                <!-- Cuadro de entrada de texto y botón de enviar -->
+                <div class="chat-input-container">
+                    <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+                    <button id="send-button">Enviar</button>
+                </div>
+            </div>
+
+            <!--Side Bar-->
+            <div>
+                <div class="sidebar">
+                    <div class="profile">
+                        <img src="images/Turing.png" alt="profile_picture">
+                        <h3>Alan Turing</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html">
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span class="item">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                <span class="item">Perfil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tutors.html">
+                                <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                                <span class="item">Tutores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="files.html">
+                                <span class="icon"><i class="fas fa-file"></i></span>
+                                <span class="item">Documentos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">
+                                <span class="icon"><i class="fas fa-comment"></i></span>
+                                <span class="item">Chat</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="logout">
+                        <a href="index.html">
+                            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="item">Salir</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <script src="js/script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                crossorigin="anonymous"></script>
 </body>
+
 </html>
