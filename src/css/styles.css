@@ -381,39 +381,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-/* Media queries para responsive design */
-@media screen and (max-width: 480px) {
-  .container-chat {
-    max-width: 100%;
-  }
-
-  .chat-list {
-    max-width: 100%;
-    border-right: none;
-  }
-
-  .chat-input-container {
-    padding: 10px;
-  }
-
-  .chat-input-container input {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .chat-input-container button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-
 /* calendario */
 
 /* Import Google font - Poppins */
@@ -576,7 +543,6 @@ header .current-date {
   border-color: #0d75ec;
 }
 
-/* ...otros estilos... */
 
 /* Reseñas */
 .link-grey {
@@ -587,13 +553,40 @@ header .current-date {
   color: #00913b;
 }
 
-/* boton azul */ 
-
 .btn-azul{
   background-color: #000000;
 }
 
-/* color  estrellas */
 .star-color{
   color: #eec028;
+}
+
+
+
+
+
+/* Media queries para responsive design */
+@media screen and (max-width: 480px) {
+  .container-chat {
+    max-width: 100%;
+  }
+
+  .chat-list {
+    max-width: 100%;
+    border-right: none;
+  }
+
+  .chat-input-container {
+    padding: 10px;
+  }
+
+  .chat-input-container input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .chat-input-container button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
