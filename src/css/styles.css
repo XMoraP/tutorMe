@@ -586,3 +586,14 @@ header .current-date {
 .link-grey:hover {
   color: #00913b;
 }
+
+/* boton azul */ 
+
+.btn-azul{
+  background-color: #000000;
+}
+
+/* color  estrellas */
+.star-color{
+  color: #eec028;
+}
