@@ -111,8 +111,8 @@ form p a{
     margin: 0 auto; /* Center the button horizontally */
     display: block; /* Make the button a block-level element */
     margin-top: 10px;
-    background: #ffeb00;
-    color: #000;
+    background: #00d2ff;
+    color: #555;
 
 }
 
@@ -132,7 +132,7 @@ form p a{
 }
 
 .btn-field button#submitBtn:hover {
-    background: #ADD8E6; /* Change the background color on hover */
-    color: #fff; /* Change the text color on hover */
+    background: #83e3f8; /* Change the background color on hover */
+    color: #555 /* Change the text color on hover */
 }
 
