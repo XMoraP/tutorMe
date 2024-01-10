@@ -1,4 +1,65 @@
+// public/javascripts/register.js
+document.addEventListener('DOMContentLoaded', function () {
+    const signupBtn = document.getElementById('signupBtn');
+  
+    signupBtn.addEventListener('click', async function () {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const repeatPassword = document.getElementById('repeatPassword').value;
+  
+      // Add any additional client-side validation here if needed
+  
+      if (password !== repeatPassword) {
+        // Passwords do not match
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Las contraseñas no coinciden',
+        });
+        return;
+      }
+  
+      // Send data to the server for registration
+      try {
+        const response = await fetch('/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password }),
+        });
+  
+        const data = await response.json();
+  
+        if (response.ok) {
+          // Registration successful
+          Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Registro exitoso',
+          });
+        } else {
+          // Registration failed
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: data.message || 'Hubo un error en el registro',
+          });
+        }
+      } catch (error) {
+        console.error('Error during registration:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Hubo un error en el registro',
+        });
+      }
+    });
+  });
+  
 
+// Interact with DOM elements
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
@@ -28,13 +89,3 @@ submitBtn.onclick = function () {
     // If all fields are correct, redirect to dashboard.html
     window.location.href = "/dashboard";
 };
-
-//Para usar más adelante un sweet alert
-document.getElementById('show-alert').addEventListener('click', function () {
-    Swal.fire({
-        title: 'Hello!',
-        text: 'This is a SweetAlert example.',
-        icon: 'success',
-        confirmButtonText: 'OK'
-    });
-});

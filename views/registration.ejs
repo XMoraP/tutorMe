@@ -20,23 +20,23 @@
     <div class="container">
         <div class="form-box">
             <h1 id="title">Regístrate</h1>
-            <form>
+            <form action="/auth/signup" method="post">
                 <div class="input-group">
                     <div class="input-field" id="nameField">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Nombre" required>
+                        <input type="text" placeholder="Nombre" id="name" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" id="email" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Contraseña">
+                        <input type="password" placeholder="Contraseña" id="password" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Repetir Contraseña" id="repeatPassword">
+                        <input type="password" placeholder="Repetir Contraseña" id="repeatPassword" required>
                     </div>
                     <p>¿Olvidaste tu contraseña? <a href="#">Haz click aquí</a></p>
                 </div>
