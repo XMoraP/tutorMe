@@ -26,7 +26,7 @@ signinBtn.onclick = function () {
 
 submitBtn.onclick = function () {
     // If all fields are correct, redirect to dashboard.html
-    window.location.href = "dashboard.html";
+    window.location.href = "/dashboard";
 };
 
 //Para usar más adelante un sweet alert
