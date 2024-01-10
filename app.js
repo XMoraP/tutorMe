@@ -7,7 +7,14 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
 const registrationRouter = require('./routes/registration');
+const filesRouter = require('./routes/files');
+const profileRouter = require('./routes/profile');
+const profileTutorRouter = require('./routes/profileTutor');
+const tuteladosRouter = require('./routes/tutelados');
+const tutorsRouter = require('./routes/tutors');
 const chatRouter = require('./routes/chat');
+
+
 
 
 
@@ -24,6 +31,12 @@ app.use('/users', usersRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/registration', registrationRouter);
 app.use('/chat', chatRouter);
+app.use('/files', filesRouter);
+app.use('/profile', profileRouter);
+app.use('/tutelados', tuteladosRouter);
+app.use('/tutors', tutorsRouter);
+app.use('/profileTutor', profileTutorRouter);
+
 
 
 
