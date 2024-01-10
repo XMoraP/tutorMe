@@ -1,0 +1,38 @@
+<%- include("header", {}) %>
+ <!--Chats-->
+ <div class="container-chat">
+    <h2>Chats</h2>
+    <!-- Contenedor de la lista de chats y el área de mensajes -->
+    <div class="chat-content">
+        <!-- Lista de chats falsos -->
+        <div class="chat-list">
+            <h4> Lista de chats</h4>
+            <br />
+            <ul>
+                <li class="active"><img src="images/Gauss.png" alt="Perfil Usuario 1"
+                        class="chat-profile-image rounded-circle">Gauss</li>
+                <li><img src="images/Einstein.png" alt="Perfil Usuario 1"
+                        class="chat-profile-image rounded-circle">Einstein</li>
+                <li><img src="images/Turing.png" alt="Perfil Usuario 1"
+                        class="chat-profile-image rounded-circle">Turing</li>
+                <li><img src="images/tutelado1.jpg" alt="Perfil Usuario 1"
+                        class="chat-profile-image rounded-circle">Pablo Martínez</li>
+                <!-- Agrega más chats según sea necesario -->
+            </ul>
+        </div>
+
+        <!-- Área de mensajes -->
+        <div class="chat-messages" id="chat-messages">
+
+
+        </div>
+    </div>
+
+    <!-- Cuadro de entrada de texto y botón de enviar -->
+    <div class="chat-input-container">
+        <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+        <button id="send-button">Enviar</button>
+    </div>
+</div>
+<script src="javascripts/script.js"></script>
+<%- include("footer", {}) %>

@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dashboardRouter = require('./routes/dashboard');
 const registrationRouter = require('./routes/registration');
+const chatRouter = require('./routes/chat');
 
 
 
@@ -22,6 +23,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/registration', registrationRouter);
+app.use('/chat', chatRouter);
+
 
 
 app.set('views', path.join(__dirname, 'views'));
