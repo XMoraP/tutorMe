@@ -47,14 +47,6 @@ header .navigation a {
     color: #fff;
 }
 
-header .navigation .cta {
-    margin-left: auto;
-    background-color: #ff69b4;
-}
-
-header .navigation .cta:hover {
-    background-color: #ff1493;
-}
 
 #top_navbar{
     background-color: whitesmoke;
@@ -108,7 +100,7 @@ header label {
 }
 
 .content .info p {
-    color: #0d0a32;
+    color: #0d6efd;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 40px;
@@ -155,13 +147,13 @@ header label {
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 600;
-    color: #1e176d;
+    color: #0d6efd;
     letter-spacing: 1px;
 }
 
 .custom-card-text {
     font-size: 18px;
-    color: #1e176d;
+    color: #0d6efd;
     font-weight: 400;
     letter-spacing: 1px;
 }
@@ -215,7 +207,7 @@ header label {
 
 .img-text {
     padding: 25px;
-    color: black;
+    color: 0d6efd;
     text-align: center;
 }
 
@@ -228,7 +220,7 @@ header label {
 
 .img-text h5 {
     font-size: 17px;
-    color: #545154;
+    color: #0d6efd;
 }
 
 /* University section styles */
@@ -237,7 +229,7 @@ header label {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
-    color: #1e176d;
+    color: #0d6efd;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-top: 5%;
@@ -256,7 +248,7 @@ footer {
     background-color: #fff;
     margin-top: 5%;
     margin-bottom: 10%;
-    color: #1e176d;
+    color: #0d6efd;
     padding: 20px 0;
     text-align: center;
     display: flex;
