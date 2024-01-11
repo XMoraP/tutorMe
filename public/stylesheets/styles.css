@@ -116,12 +116,21 @@ body {
 
 }
 
+.filter{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .filter #buscador {
-  width: 600px;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 600px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .filter-button {
@@ -132,12 +141,28 @@ body {
   cursor: pointer;
   padding: 5px 10px;
   font-size: 16px;
+  margin-left: 10px;
 }
 
 .filter-button:hover {
   background: #0056b3;
 }
 
+@media screen and (max-width: 768px) {
+  .filter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .filter #buscador {
+    max-width: 60%;
+    margin-bottom: 0; /* Add margin at the bottom for spacing */
+  }
+
+  .filter-button {
+    margin-left: 0; /* Reset margin for the button on smaller screens */
+  }
+}
 
 .wrapper .section .top_navbar .chat a {
   font-size: 28px;
@@ -411,4 +436,36 @@ header .current-date {
     font-size: 14px;
     padding: 8px 16px;
   }
+}
+
+#profile-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Establece la altura al 100% de la ventana principal para centrar verticalmente */
+}
+
+.top-card {
+  margin-top: 50px;
+  border: 2px solid #091063bb; /* Agrega un borde de 2px sólido con color #333 alrededor de la carta */
+  border-radius: 10px;
+  padding: 10px; /* Agrega relleno alrededor de la carta si es necesario */
+  margin-bottom: 10px; /* Agrega un espacio entre las secciones si es necesario */
+}
+
+.custom-form {
+  border: 1px solid #989898; /* Borde de 1px sólido con color #ddd */
+  padding: 15px; /* Espaciado interno de 15px */
+  margin-bottom: 20px; /* Margen inferior de 20px */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.custom-border {
+  border: 1px solid #989898; /* Puedes ajustar el color según tus preferencias */
+  padding: 15px;
+  border-radius: 8px;
+  border-color: #0056b3;
+  margin-bottom: 20px;
 }

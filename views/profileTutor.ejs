@@ -1,10 +1,8 @@
 <%- include("header", {}) %>
 <!--Porfile card section -->
-<main>
+<main id="profile-container">
     <section class="top-card">
-        <img src="images/Turing.png" alt="user picture">
-    </section>
-    <section class="middle-card">
+        <img id="profile-img" src="images/Turing.png" alt="user picture" style="width: 250px; height: 250px; object-fit: cover;">
         <h1>Alan Turing</h1>
         <span>Status: Tutor<br></span>
         <span>Email: alant@gmail.com<br></span>
@@ -21,9 +19,30 @@
     <div class="container-fluid">
         <h2>Perfil Tutor</h2>
         <div class="container">
-            <h4>Información de usuario</h4>
+            <h4>Información de tutor</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-8 custom-border">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="validationCustom06" class="form-label">Cambiar foto de perfil</label>
+                        <input type="file" class="form-control" id="validationCustom06" accept="image/*" onchange="previewImage()">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom06" class="form-label">Vista previa: </label>
+                        <img id="preview" src="#" alt="Tu imagen se mostrará aquí"
+                            class="img-thumbnail rounded-circle" style="max-width: 100px; max-height: 100px;">
+                    </div>
+                    <!-- Nuevo div para el botón de guardar -->
+                    <div class="col-12 mt-3">
+                        <button class="btn btn-info" type="button" onclick="saveImageToDatabase()">Guardar</button>
+                    </div>
+                    <!-- Fin del nuevo div para el botón de guardar -->
+                </div>
+            </div>
+            
+            
+            <br>
+            <form class="row g-3 needs-validation custom-form" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="validationCustom01" value="Alan" required>
@@ -73,7 +92,7 @@
 
             <h4>Pago</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation custom-form" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Número de tarjeta</label>
                     <input type="text" class="form-control" id="validationCustom01"
@@ -101,7 +120,7 @@
             <br>
             <h4>Editar Contraseña</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation custom-form" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Contraseña actual</label>
                     <div class="input-group">
@@ -134,7 +153,7 @@
             <br>
             <h4>Información de tutor</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation custom-form" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Asignaturas a impartir</label>
                     <input type="text" class="form-control" id="validationCustom01" value="Física"
@@ -167,4 +186,21 @@
     </div>
 </div>
 <script src="javascripts/script.js"></script>
+<script>
+    function previewImage() {
+        var input = document.getElementById('validationCustom06');
+        var preview = document.getElementById('preview');
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
 <%- include("footer", {}) %>
