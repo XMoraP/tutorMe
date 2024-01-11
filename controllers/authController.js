@@ -5,21 +5,24 @@ const router = express.Router();
 const User = require('../models/user');
 
 router.post('/login', async (req, res) => {
-    try {
-      const { email, password} = req.body;
-  
-      const user = await User.findUserByEmailAndPassword(email, password);
-      req.session.email = email;
+  try {
+    const {email, password} = req.body;
 
-  
-      if (user) {
-        return res.status(200).json({ success: true, message: 'Login successful.', user });
-      }
-    } catch (error) {
-      console.error('Error during login:', error);
-      return res.status(500).json({ success: false, message: 'Internal server error.' });
+    const user = await User.findUserByEmailAndPassword(email, password);
+
+    if (user) {
+      req.session.email = email;
+      req.session.userName = user.nombre;
+      req.session.userApellido = user.apellido;
+      return res.status(200).json({ success: true, message: 'Login successful.', user });
+    } else {
+      return res.status(401).json({ success: false, message: 'Invalid credentials.' });
     }
-  });
+  } catch (error) {
+    console.error('Error during login:', error);
+    return res.status(500).json({ success: false, message: 'Internal server error.' });
+  }
+});
 
 router.post('/signup', async (req, res) => {
 
@@ -29,6 +32,8 @@ router.post('/signup', async (req, res) => {
         console.log('Start registration process');
 
         await User.createUser({ nombre: name, eMail: email, contrasenna: password });
+        req.session.email = email;
+        req.session.userName = name;
 
         console.log('Registration successful');
         res.status(200).json({ success: true });
@@ -39,5 +44,6 @@ router.post('/signup', async (req, res) => {
     console.log('End registration process');
   }
 });
+
 
 module.exports = router;

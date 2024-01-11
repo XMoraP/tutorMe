@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const updateUser = require('../models/profile').updateUser;
+const User = require('../models/user');
+
 
 router.post('/userProfile', async (req, res) => {
   try {
@@ -9,6 +11,10 @@ router.post('/userProfile', async (req, res) => {
 
     // Llama al método updateUser para actualizar el perfil
     await updateUser({ nombre: name, nombre_grado: grado, email, apellido }, req.session.email);
+    const user = await User.findUserByEmail(email); 
+    req.session.email = email;
+    req.session.userName = user.nombre;
+    req.session.userApellido = user.apellido;
 
     // Envía una respuesta exitosa y redirige
     res.redirect("/profile");

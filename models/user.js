@@ -30,6 +30,19 @@ module.exports = {
       });
     });
   },
+
+  findUserByEmail: (email) => {
+    return new Promise((resolve, reject) => {
+      const selectQuery = 'SELECT * FROM user WHERE eMail = ?';
+      db.query(selectQuery, [email], (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result[0]); // Assuming the result is an array with one user
+        }
+      });
+    });
+  },
   
 };
 
