@@ -1,4 +1,5 @@
 // public/javascripts/register.js
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const signinBtn = document.getElementById('signinBtn');
@@ -21,21 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
           const data = await response.json();
     
           if (response.ok) {
-            // Login successful
             Swal.fire({
               icon: 'success',
               title: 'Success',
-              text: 'Login successful',
+              text: 'Inicio de sesión exitoso',
             }).then(() => {
-              // Redirect or perform other actions after successful login
               window.location.href = "/dashboard";
             });
           } else {
             // Login failed
             Swal.fire({
-              icon: 'error',
+              icon: 'warning',
               title: 'Error',
-              text: data.message || 'Invalid email or password',
+              text: data.message || 'El correo electrónico o la contraseña son incorrectos',
             });
           }
         } catch (error) {
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
           Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: 'There was an error during login',
+            text: 'Hubo un error en el inicio de sesión',
           });
         }
       });
@@ -53,15 +52,31 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const repeatPassword = document.getElementById('repeatPassword').value;
-    
-        // Add any additional client-side validation here if needed
-    
+        
         if (password !== repeatPassword) {
             // Passwords do not match
             Swal.fire({
-            icon: 'error',
+            icon: 'warning',
             title: 'Error',
             text: 'Las contraseñas no coinciden',
+            });
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            Swal.fire({
+              icon: 'warning',
+              title: 'Error',
+              text: 'El correo electrónico no es válido',
+            });
+            return;
+          }
+      
+        if (!isValidPassword(password)) {
+            Swal.fire({
+              icon: 'warning',
+              title: 'Error',
+              text: 'La contraseña debe tener al menos 6 caracteres, una letra mayúscula, un número y un símbolo',
             });
             return;
         }
@@ -78,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await response.json();
 
             if (response.ok) {
-            // Registration successful
             Swal.fire({
                 icon: 'success',
                 title: 'Éxito',
@@ -87,10 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     window.location.href = "/dashboard";
                 });
             } else {
-            // Registration failed
             Swal.fire({
                 icon: 'error',
-                title: 'Error 1',
+                title: 'Error',
                 text: data.message || 'Hubo un error en el registro',
             });
             }
@@ -98,15 +111,13 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error during registration:', error);
             Swal.fire({
             icon: 'error',
-            title: 'Error 2',
+            title: 'Error',
             text: 'Hubo un error en el registro',
             });
         }
         });
     });
-  
 
-// Interact with DOM elements
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
@@ -131,3 +142,16 @@ signinBtn.onclick = function () {
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
 };
+
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function isValidPassword(password) {
+    // Password must be at least 6 characters long
+    // Must contain at least one capital letter, one number, and one symbol
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{6,}$/;
+    return passwordRegex.test(password);
+}
