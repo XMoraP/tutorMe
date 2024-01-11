@@ -1,15 +1,12 @@
 <%- include("header", {}) %>
 <!--Profile card section -->
-<main>
+<main id="profile-container">
     <section class="top-card">
-        <img src="images/Turing.png" alt="user picture">
-    </section>
-    <section class="middle-card">
+        <img id="profile-img" src="images/Turing.png" alt="user picture" style="width: 250px; height: 250px; object-fit: cover;">
         <h1>Alan Turing</h1>
         <span>Status: Estudiante<br></span>
         <span>Email: alant@gmail.com<br></span>
     </section>
-    <br>
 </main>
 
 <!-- Profile Sections -->
@@ -17,26 +14,28 @@
     <div class="container-fluid">
         <h2>Perfil</h2>
         <div class="container">
-            <h4>Información de usuario</h4>
+            <h4>Información de estudiante</h4>
             <br>
-            <!-- Foto perfil-->
-            <div class="col-md-4">
-                <label for="validationCustom06" class="form-label">Cambiar foto de perfil</label>
-                <input type="file" class="form-control" id="validationCustom06" accept="image/*">
+           <!-- Foto perfil-->
+           <div class="col-md-8 custom-border"> <!-- Contenedor con borde para ambos elementos -->
+            <div class="row"> <!-- Fila para los dos elementos -->
+                <div class="col-md-6"> <!-- Primera columna -->
+                    <label for="validationCustom06" class="form-label">Cambiar foto de perfil</label>
+                    <input type="file" class="form-control" id="validationCustom06" accept="image/*">
+                </div>
+                <div class="col-md-6"> <!-- Segunda columna -->
+                    <label for="validationCustom06" class="form-label">Vista previa: </label>
+                    <img id="preview" src="#" alt="Tu imagen se mostrará aquí"
+                        class="img-thumbnail rounded-circle" style="max-width: 100px; max-height: 100px;">
+                </div>
             </div>
-            <br>
-            <div class="col-md-4">
-                <label for="validationCustom06" class="form-label">Vista previa: </label>
-                <img id="preview" src="#" alt="Tu imagen se mostrará aquí"
-                    class="img-thumbnail rounded-circle" style="max-width: 100px; max-height: 100px;">
-
-            </div>
+        </div>
 
             <br>
             <!--End foto de perfil-->
             <h4>Información de usuario</h4>
             <br>
-            <form class="row g-3 needs-validation" action="/profileCont/userProfile" method="post">
+            <form class="row g-3 needs-validation custom-form" action="/profileCont/userProfile" method="post">
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -74,7 +73,7 @@
 
             <h4>Pago</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation custom-form" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Número de tarjeta</label>
                     <input type="text" class="form-control" id="validationCustom01"
@@ -102,7 +101,7 @@
             <br>
             <h4>Editar Contraseña</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation custom-form" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Contraseña actual</label>
                     <div class="input-group">
@@ -136,7 +135,7 @@
             <br>
             <h4>Alta de tutor</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation custom-form" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Asignaturas a impartir</label>
                     <input type="text" class="form-control" id="validationCustom01" value="Física"

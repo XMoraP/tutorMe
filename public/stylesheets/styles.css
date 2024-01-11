@@ -412,3 +412,35 @@ header .current-date {
     padding: 8px 16px;
   }
 }
+
+#profile-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Establece la altura al 100% de la ventana principal para centrar verticalmente */
+}
+
+.top-card {
+  margin-top: 50px;
+  border: 2px solid #091063bb; /* Agrega un borde de 2px sólido con color #333 alrededor de la carta */
+  border-radius: 10px;
+  padding: 10px; /* Agrega relleno alrededor de la carta si es necesario */
+  margin-bottom: 10px; /* Agrega un espacio entre las secciones si es necesario */
+}
+
+.custom-form {
+  border: 1px solid #989898; /* Borde de 1px sólido con color #ddd */
+  padding: 15px; /* Espaciado interno de 15px */
+  margin-bottom: 20px; /* Margen inferior de 20px */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.custom-border {
+  border: 1px solid #989898; /* Puedes ajustar el color según tus preferencias */
+  padding: 15px;
+  border-radius: 8px;
+  border-color: #0056b3;
+  margin-bottom: 20px;
+}
