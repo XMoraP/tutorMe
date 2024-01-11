@@ -44,7 +44,7 @@ a {
 	max-width: 1100px;
 	background: #fff;
 	margin: 30px auto;
-	overflow: hidden;
+	overflow: auto;
 }
 
 .chat-header {
@@ -88,8 +88,7 @@ a {
 .chat-messages {
 	padding: 30px;
 	height: 450px; /* Establece la altura deseada */
-	/*overflow-y: scroll;*/
-	
+	overflow-y: scroll;	
 }
 
 .chat-messages .message {
