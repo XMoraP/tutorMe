@@ -4,26 +4,31 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 
+console.log('Reached /signup endpoint');
 router.post('/signup', async (req, res) => {
-
-    console.log('3. ESTOY EN SIGNUP');
-
-    const { name, email, password } = req.body;
-
     try {
-        console.log('Start registration process');
+        const { name, email, password } = req.body;
 
+        // Basic input validation
+        if (!name || !email || !password) {
+            return res.status(400).json({ success: false, message: 'Please provide all required fields.' });
+        }
+
+        // Check if the user already exists
+        const existingUser = await User.findUser(name, password);
+        if (existingUser) {
+            return res.status(409).json({ success: false, message: 'User already exists.' });
+        }
+
+        // Create a new user
         await User.createUser({ nombre: name, eMail: email, contrasenna: password });
 
         // Registration successful
-        console.log('Registration successful');
-        res.status(200).json({ success: true });
+        return res.status(201).json({ success: true, message: 'Registration successful.' });
     } catch (error) {
         console.error('Error during registration:', error);
-        res.status(500).json({ success: false, message: 'Error en el servidor' });
-    } finally {
-    console.log('End registration process');
-  }
+        return res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
 });
 
 module.exports = router;

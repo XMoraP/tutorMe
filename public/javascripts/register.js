@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             console.log('2. QUE  VA AL SIGNUP');
 
-            const response = await fetch('/signup', {
+            const response = await fetch('/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
