@@ -9,7 +9,6 @@ const db = mysql.createConnection({
     user: 'XMoraP',
     password: 'tutorMe123',
     database: 'tutorMe',
-    port: 3306,
     ssl: {
         ca: fs.readFileSync('./DigiCertGlobalRootCA.crt.pem'),
     }

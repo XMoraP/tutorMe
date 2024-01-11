@@ -1,0 +1,13 @@
+.round-image {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    border-radius: 50%; /* Hace que las esquinas sean redondeadas */
+  }
+  
+  .round-image-container img {
+    width: 100%; /* Asegura que la imagen llene completamente el contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+  }
+  

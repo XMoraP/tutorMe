@@ -9,6 +9,8 @@ router.post('/login', async (req, res) => {
       const { email, password} = req.body;
   
       const user = await User.findUserByEmailAndPassword(email, password);
+      req.session.email = email;
+
   
       if (user) {
         return res.status(200).json({ success: true, message: 'Login successful.', user });

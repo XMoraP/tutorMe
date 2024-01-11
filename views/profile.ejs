@@ -36,33 +36,21 @@
             <!--End foto de perfil-->
             <h4>Información de usuario</h4>
             <br>
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation" action="/profileCont/userProfile" method="post">
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="Alan" required>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustom02" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="Turing" required>
+                    <input type="text" class="form-control" id="apellido" name="apellido" required>
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustomUsername" class="form-label">Email</label>
                     <div class="input-group has-validation">
-                        <input type="email" class="form-control" id="validationCustomUsername"
-                            aria-describedby="inputGroupPrepend" value="alant@gmail.com" required>
+                        <input type="email" class="form-control" id="email"
+                            aria-describedby="inputGroupPrepend" name="email" required>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="validationCustomUsername" class="form-label">Nombre Usuario</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="validationCustomUsername"
-                            aria-describedby="inputGroupPrepend" value="AlanT" required>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="validationCustom03" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="validationCustom03" value="Madrid">
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustom04" class="form-label">Universidad</label>
@@ -75,10 +63,10 @@
                 </div>
                 <div class="col-md-5">
                     <label for="validationCustom05" class="form-label">Grado</label>
-                    <input type="text" class="form-control" id="validationCustom05">
+                    <input type="text" class="form-control" id="grado" name="grado">
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-info" type="button" onclick="showAlert()">Guardar</button>
+                    <button class="btn btn-info" type="submit" onclick="showAlert()">Guardar</button>
                 </div>
             </form>
             <br>
