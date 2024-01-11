@@ -116,12 +116,21 @@ body {
 
 }
 
+.filter{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .filter #buscador {
-  width: 600px;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 600px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .filter-button {
@@ -132,12 +141,28 @@ body {
   cursor: pointer;
   padding: 5px 10px;
   font-size: 16px;
+  margin-left: 10px;
 }
 
 .filter-button:hover {
   background: #0056b3;
 }
 
+@media screen and (max-width: 768px) {
+  .filter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .filter #buscador {
+    max-width: 60%;
+    margin-bottom: 0; /* Add margin at the bottom for spacing */
+  }
+
+  .filter-button {
+    margin-left: 0; /* Reset margin for the button on smaller screens */
+  }
+}
 
 .wrapper .section .top_navbar .chat a {
   font-size: 28px;
