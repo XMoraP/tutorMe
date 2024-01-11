@@ -1,62 +1,72 @@
 // public/javascripts/register.js
 document.addEventListener('DOMContentLoaded', function () {
-    const signupBtn = document.getElementById('signupBtn');
+    const submitBtn = document.getElementById('submitBtn');
   
-    signupBtn.addEventListener('click', async function () {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const repeatPassword = document.getElementById('repeatPassword').value;
-  
-      // Add any additional client-side validation here if needed
-  
-      if (password !== repeatPassword) {
-        // Passwords do not match
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Las contraseñas no coinciden',
-        });
-        return;
-      }
-  
-      // Send data to the server for registration
-      try {
-        const response = await fetch('/signup', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, password }),
-        });
-  
-        const data = await response.json();
-  
-        if (response.ok) {
-          // Registration successful
-          Swal.fire({
-            icon: 'success',
-            title: 'Éxito',
-            text: 'Registro exitoso',
-          });
-        } else {
-          // Registration failed
-          Swal.fire({
+    submitBtn.addEventListener('click', async function () {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const repeatPassword = document.getElementById('repeatPassword').value;
+
+        console.log('1. EN CAMINOOOOO');
+    
+        // Add any additional client-side validation here if needed
+    
+        if (password !== repeatPassword) {
+            // Passwords do not match
+            Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: data.message || 'Hubo un error en el registro',
-          });
+            text: 'Las contraseñas no coinciden',
+            });
+            return;
         }
-      } catch (error) {
-        console.error('Error during registration:', error);
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Hubo un error en el registro',
+    
+        // Send data to the server for registration
+        try {
+            console.log('2. QUE  VA AL SIGNUP');
+
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password }),
+            });
+
+            console.log('2.2 QUE  VA AL SIGNUP');
+    
+            const data = await response.json();
+
+            console.log('2.3 QUE  VA AL SIGNUP');
+    
+            if (response.ok) {
+            // Registration successful
+            Swal.fire({
+                icon: 'success',
+                title: 'Éxito',
+                text: 'Registro exitoso',
+                }).then(() => {
+                    window.location.href = "/dashboard";
+                });
+            } else {
+            // Registration failed
+            Swal.fire({
+                icon: 'error',
+                title: 'Error 1',
+                text: data.message || 'Hubo un error en el registro',
+            });
+            }
+        } catch (error) {
+            console.error('Error during registration:', error);
+            Swal.fire({
+            icon: 'error',
+            title: 'Error 2',
+            text: 'Hubo un error en el registro',
+            });
+        }
         });
-      }
     });
-  });
   
 
 // Interact with DOM elements
@@ -83,9 +93,4 @@ signinBtn.onclick = function () {
     title.innerHTML = "Iniciar Sesión";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
-};
-
-submitBtn.onclick = function () {
-    // If all fields are correct, redirect to dashboard.html
-    window.location.href = "/dashboard";
 };
