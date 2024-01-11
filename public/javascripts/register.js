@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const password = document.getElementById('password').value;
         const repeatPassword = document.getElementById('repeatPassword').value;
 
-        console.log('1. EN CAMINOOOOO');
     
         // Add any additional client-side validation here if needed
     
@@ -22,9 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
     
-        // Send data to the server for registration
         try {
-            console.log('2. QUE  VA AL SIGNUP');
 
             const response = await fetch('/auth/signup', {
                 method: 'POST',
@@ -34,11 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: JSON.stringify({ name, email, password }),
             });
 
-            console.log('2.2 QUE  VA AL SIGNUP');
     
             const data = await response.json();
 
-            console.log('2.3 QUE  VA AL SIGNUP');
     
             if (response.ok) {
             // Registration successful
