@@ -17,10 +17,11 @@ module.exports = {
       });
     });
   },
-  findUser: (nombre, contrasenna) => {
+
+  findUserByEmailAndPassword: (email, password) => {
     return new Promise((resolve, reject) => {
-      const selectQuery = 'SELECT * FROM user WHERE nombre = ? AND contrasenna = ?';
-      db.query(selectQuery, [nombre, contrasenna], (err, result) => {
+      const selectQuery = 'SELECT * FROM user WHERE eMail = ? AND contrasenna = ?';
+      db.query(selectQuery, [email, password], (err, result) => {
         if (err) {
           reject(err);
         } else {
@@ -29,4 +30,6 @@ module.exports = {
       });
     });
   },
+  
 };
+

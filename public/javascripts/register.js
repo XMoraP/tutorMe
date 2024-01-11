@@ -1,13 +1,58 @@
 // public/javascripts/register.js
 document.addEventListener('DOMContentLoaded', function () {
-    const submitBtn = document.getElementById('submitBtn');
+
+    const signinBtn = document.getElementById('signinBtn');
+
+    const signupBtn = document.getElementById('signupBtn');
+
+    signinBtn.addEventListener('click', async function () {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        try {
+          const response = await fetch('/auth/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password}),
+          });
+    
+          const data = await response.json();
+    
+          if (response.ok) {
+            // Login successful
+            Swal.fire({
+              icon: 'success',
+              title: 'Success',
+              text: 'Login successful',
+            }).then(() => {
+              // Redirect or perform other actions after successful login
+              window.location.href = "/dashboard";
+            });
+          } else {
+            // Login failed
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: data.message || 'Invalid email or password',
+            });
+          }
+        } catch (error) {
+          console.error('Error during login:', error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'There was an error during login',
+          });
+        }
+      });
   
-    submitBtn.addEventListener('click', async function () {
+    signupBtn.addEventListener('click', async function () {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const repeatPassword = document.getElementById('repeatPassword').value;
-
     
         // Add any additional client-side validation here if needed
     
@@ -22,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     
         try {
-
             const response = await fetch('/auth/signup', {
                 method: 'POST',
                 headers: {
@@ -31,10 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: JSON.stringify({ name, email, password }),
             });
 
-    
             const data = await response.json();
 
-    
             if (response.ok) {
             // Registration successful
             Swal.fire({

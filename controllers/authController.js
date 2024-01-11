@@ -4,31 +4,49 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 
-console.log('Reached /signup endpoint');
-router.post('/signup', async (req, res) => {
+router.post('/login', async (req, res) => {
     try {
-        const { name, email, password } = req.body;
+      const { email, password} = req.body;
+  
+      // Basic input validation
+      if (!email || !password) {
+        return res.status(400).json({ success: false, message: 'Please provide both email and password.' });
+      }
+  
+      // Find the user by email and password
+      const user = await User.findUserByEmailAndPassword(email, password);
+  
+      if (user) {
+        // Login successful
+        return res.status(200).json({ success: true, message: 'Login successful.', user });
+      } else {
+        // User not found or incorrect credentials
+        return res.status(401).json({ success: false, message: 'Invalid email or password.' });
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
+  });
 
-        // Basic input validation
-        if (!name || !email || !password) {
-            return res.status(400).json({ success: false, message: 'Please provide all required fields.' });
-        }
+router.post('/signup', async (req, res) => {
 
-        // Check if the user already exists
-        const existingUser = await User.findUser(name, password);
-        if (existingUser) {
-            return res.status(409).json({ success: false, message: 'User already exists.' });
-        }
+    const { name, email, password } = req.body;
 
-        // Create a new user
+    try {
+        console.log('Start registration process');
+
         await User.createUser({ nombre: name, eMail: email, contrasenna: password });
 
         // Registration successful
-        return res.status(201).json({ success: true, message: 'Registration successful.' });
+        console.log('Registration successful');
+        res.status(200).json({ success: true });
     } catch (error) {
         console.error('Error during registration:', error);
-        return res.status(500).json({ success: false, message: 'Internal server error.' });
-    }
+        res.status(500).json({ success: false, message: 'Error en el servidor' });
+    } finally {
+    console.log('End registration process');
+  }
 });
 
 module.exports = router;
