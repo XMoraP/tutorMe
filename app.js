@@ -18,6 +18,7 @@ const tuteladosRouter = require('./routes/tutelados');
 const tutorsRouter = require('./routes/tutors');
 const chatRouter = require('./routes/chat');
 const authController = require('./controllers/authController');
+const salasRouter = require('./routes/salas');
 
 const db = require('./config/database');
 
@@ -42,6 +43,7 @@ app.use('/tutelados', tuteladosRouter);
 app.use('/tutors', tutorsRouter);
 app.use('/profileTutor', profileTutorRouter);
 app.use('/auth', authController);
+app.use('/salas', salasRouter);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

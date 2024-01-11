@@ -8,6 +8,14 @@ var app = require('../app');
 var debug = require('debug')('proyecto-swi:server');
 var http = require('http');
 var dashboardRouter = require('../routes/dashboard');
+const socketio = require("socket.io");
+const formatMessage = require("../public/javascripts/messages.js");
+const {
+  userJoin,
+  getCurrentUser,
+  userLeave,
+  getRoomUsers,
+} = require("../public/javascripts/users.js");
 // ...
 app.use('/dashboard', dashboardRouter);
 
@@ -25,9 +33,69 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
+
+/**CHAT **/
+
+const io = socketio(server);
+
+const botName = "ChatCord Bot";
+
+// Run when client connects
+io.on("connection", (socket) => {
+  socket.on("joinRoom", ({ username, room }) => {
+    const user = userJoin(socket.id, username, room);
+
+    socket.join(user.room);
+
+    // Welcome current user
+    socket.emit("message", formatMessage(botName, `¡Bienvenido a la Sala ${user.room}, ${user.username}!`));
+
+    // Broadcast when a user connects
+    socket.broadcast
+      .to(user.room)
+      .emit(
+        "message",
+        formatMessage(botName, `${user.username} se ha unido a la sala.`)
+      );
+
+    // Send users and room info
+    io.to(user.room).emit("roomUsers", {
+      room: user.room,
+      users: getRoomUsers(user.room),
+    });
+  });
+
+  // Listen for chatMessage
+  socket.on("chatMessage", (msg) => {
+    const user = getCurrentUser(socket.id);
+
+    io.to(user.room).emit("message", formatMessage(user.username, msg));
+  });
+
+  // Runs when client disconnects
+  socket.on("disconnect", () => {
+    const user = userLeave(socket.id);
+
+    if (user) {
+      io.to(user.room).emit(
+        "message",
+        formatMessage(botName, `${user.username} se ha ido de la sala.`)
+      );
+
+      // Send users and room info
+      io.to(user.room).emit("roomUsers", {
+        room: user.room,
+        users: getRoomUsers(user.room),
+      });
+    }
+  });
+});
+
+
 /**
  * Listen on provided port, on all network interfaces.
  */
+
 
 server.listen(port);
 server.on('error', onError);
@@ -92,3 +160,4 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+

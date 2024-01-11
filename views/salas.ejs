@@ -1,0 +1,32 @@
+<%- include("header", {}) %>
+<div class="join-container">
+    <header class="join-header">
+        <h1><i class="fas fa-smile"></i>Chat Salas</h1>
+    </header>
+    <main class="join-main">
+        <form action="/chat">
+            <div class="form-control">
+                <label for="username">Nombre Usuario</label>
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Enter username..."
+                    required
+                />
+            </div>
+            <div class="form-control">
+                <label for="room">Sala</label>
+                <select name="room" id="room">
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="Ingenierías">Ingenierías</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="ADE">ADE</option>
+                    <option value="Arte">Arte</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Unirse</button>
+        </form>
+    </main>
+</div>
+<%- include("footer", {}) %>

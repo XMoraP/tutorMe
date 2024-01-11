@@ -1,38 +1,37 @@
 <%- include("header", {}) %>
- <!--Chats-->
- <div class="container-chat">
-    <h2>Chats</h2>
-    <!-- Contenedor de la lista de chats y el área de mensajes -->
-    <div class="chat-content">
-        <!-- Lista de chats falsos -->
-        <div class="chat-list">
-            <h4> Lista de chats</h4>
-            <br />
-            <ul>
-                <li class="active"><img src="images/Gauss.png" alt="Perfil Usuario 1"
-                        class="chat-profile-image rounded-circle">Gauss</li>
-                <li><img src="images/Einstein.png" alt="Perfil Usuario 1"
-                        class="chat-profile-image rounded-circle">Einstein</li>
-                <li><img src="images/Turing.png" alt="Perfil Usuario 1"
-                        class="chat-profile-image rounded-circle">Turing</li>
-                <li><img src="images/tutelado1.jpg" alt="Perfil Usuario 1"
-                        class="chat-profile-image rounded-circle">Pablo Martínez</li>
-                <!-- Agrega más chats según sea necesario -->
-            </ul>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1><i class="fas fa-smile"></i>Sala</h1>
+        <a id="leave-btn" class="btn">Dejar sala</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3><i class="fas fa-comments"></i> Nombre Sala:</h3>
+          <h2 id="room-name"></h2>
+          <h3><i class="fas fa-users"></i>Usuarios</h3>
+          <ul id="users"></ul>
         </div>
-
-        <!-- Área de mensajes -->
-        <div class="chat-messages" id="chat-messages">
-
-
-        </div>
+        <div class="chat-messages"></div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+            id="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button class="btn"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </form>
+      </div>
     </div>
 
-    <!-- Cuadro de entrada de texto y botón de enviar -->
-    <div class="chat-input-container">
-        <input type="text" id="message-input" placeholder="Escribe un mensaje...">
-        <button id="send-button">Enviar</button>
-    </div>
-</div>
-<script src="javascripts/script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/chat.js"></script>
 <%- include("footer", {}) %>
