@@ -1,99 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat,wght@1,500&display=swap');
+/* Add this import at the beginning for Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-/* Styles that override everything */
-html, body{
-    background-color: #fff;
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+html, body {
+    height: 100%;
     font-family: "Montserrat", sans-serif;
 }
 
-
-section {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    background-color: #fff;
-}
-
-/* Styles for the sections */
-
+/* Navbar styles */
 header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    padding: 30px 10%; /* Updated padding values */
+    background-color: whitesmoke;
+    padding: 15px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 header .logo {
-    color: #2c20ae;
-    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #0d6efd;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 1px;
+}
+
+header .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 header .navigation a {
-    color: #fff;
-    background: #2c20ae;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-bottom: 0;
+    letter-spacing: 2px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    padding: 5px 20px;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: background;
-}
-
-header .navigation a:not(:last-child) {
-    margin-right: 30px;
-}
-
-header .navigation a:hover {
-    background: #493be57d;
     color: #fff;
 }
 
-.content {
-    background-color: #fff;
-    font-family: "Montserrat", sans-serif;
+header .navigation .cta {
+    margin-left: auto;
+    background-color: #ff69b4;
+}
+
+header .navigation .cta:hover {
+    background-color: #ff1493;
+}
+
+#top_navbar{
+    background-color: whitesmoke;
+    padding: 15px 10%;
     display: flex;
-    justify-content: space-around; /* Adjusted alignment */
-    max-width: 100%; /* Adjusted maximum width to span the entire width of the section */
-    margin: 60px 10%; /* Adjusted margin values */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+#signin {
+    font-family: "Montserrat", sans-serif;
+}
+
+header label {
+    display: none; /* Hide the label for simplicity */
+}
+
+#check:checked ~ header .navigation {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Hero section styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10%;
 }
 
 .content .info {
-    background-color: #fff;
-    flex: 1; /* Allow the "info" element to grow and take up available space */
-    max-width: 100%; /* Adjusted maximum width for "info" element */
-    padding: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
 }
 
 .content .info h2 {
-    color: #2c20ae;
-    font-size: 60px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    line-height: 60px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #0d6efd;
 }
 
 .content .info h2 span {
-    color: #2c20ae;
+    color: #0d6efd;
     font-size: 50px;
     font-weight: 600;
 }
 
 .content .info p {
-    color: #2c20ae;
+    color: #0d0a32;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 40px;
@@ -109,7 +124,6 @@ header .navigation a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     transition: 0.3s;
-    transition-property: background;
 }
 
 .content .info-btn:hover {
@@ -117,103 +131,12 @@ header .navigation a:hover {
 }
 
 .student-image {
-    overflow: hidden;
+    max-width: 100%;
     height: auto;
     width: auto;
-    float: inline-start;
 }
 
-.university-image {
-    width: 80%; /* 1/5th of the page width (100% / 5) */
-    max-width: 100%; /* Ensure the image doesn't exceed its original width */
-    height: auto; /* Maintain the image's aspect ratio */
-}
-
-.titulo-seccion h2{
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    color: #1e176d;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 5%;
-    letter-spacing: 3px;
-}
-
-
-
-/********** SECCION TUTORES **********/
-.team-area{
-    padding-top: 5%;
-    background-color: #fff;
-
-}
-.single-team{
-  box-shadow:0px 7px 7px 2px rgba(0,0,0,0.1);
-  background-color: #fff;
-  margin-bottom: 10px;
-  margin-left:10px;
- 
-}
-.single-team:hover .social{
-    cursor: pointer;
-    opacity: 1;
-    transform: rotateY(0deg) scale(1, 1);
-}
-.img-area{
-    overflow: hidden;
-    position: relative;
-}
-.img-area img{
-    width: 100%;
-}
-.img-area:hover img{
-    transform: scale(1.2)
-}
-.img-area img{
-    transition: all 0.4s ease 0s;
-}
-@media (max-width: 768px){
-    .img-area img{
-        display: inline-block;
-    }
-}
-.img-area .social{
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transition: .5s;
-    transform: rotateY(180deg) scale(0.5, 0.5);
-}
-.img-area .social ul{
-    text-align: center;
-    position: relative;
-    top: 175px;
-}
-.img-text{
-    padding: 25px;
-    color: black;
-    text-align: center;
-}
-.img-text h4{
-    margin: 0 0 5px;
-    font-size: 30px;
-   font-family: sans-serif;
-    letter-spacing: 5px;
-}
-.img-text h5{
-    font-size: 17px;
-    color: #545154
-
-}
-
-/* SECCION DE SERVICIOS */
+/* Service cards styles */
 .card {
     border: none;
     margin: 5%;
@@ -228,69 +151,122 @@ header .navigation a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Customize the card title text */
 .custom-card-title {
     font-family: "Montserrat", sans-serif;
-    font-size: 24px; /* Customize font size */
-    font-weight: 600; /* Customize font weight */
-    color: #1e176d; /* Customize text color */
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e176d;
     letter-spacing: 1px;
 }
 
-/* Customize the card description text */
 .custom-card-text {
-    font-size: 18px; /* Customize font size */
-    color: #1e176d; /* Customize text color */
-    font-weight: 400; /* Customize font weight */
+    font-size: 18px;
+    color: #1e176d;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
+/* Team section styles */
+.team-area {
+    padding-top: 5%;
+    background-color: #fff;
+}
 
+.single-team {
+    box-shadow: 0px 7px 7px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
 
-/*BOTON*/
-.cta button{
-    margin-left: 20px;
-    padding: 10px 25px;
-    background-color: #2c20ae;
-    font-size: 13px;
-    border: none;
-    border-radius: 50px;
+.single-team:hover .social {
     cursor: pointer;
-    transition: all 0.3s ease 0s;
-    color: #fff;
+    opacity: 1;
+    transform: rotateY(0deg) scale(1, 1);
+}
+
+.img-area {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-area img {
+    width: 100%;
+    transition: all 0.4s ease 0s;
+}
+
+.img-area:hover img {
+    transform: scale(1.2);
+}
+
+
+.img-area .social {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+
+.img-text {
+    padding: 25px;
+    color: black;
+    text-align: center;
+}
+
+.img-text h4 {
+    margin: 0 0 5px;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+}
+
+.img-text h5 {
+    font-size: 17px;
+    color: #545154;
+}
+
+/* University section styles */
+.titulo-seccion h2 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #1e176d;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-top: 5%;
+    letter-spacing: 3px;
 }
 
-
-.cta button:hover {
-    background-color: rgba(18, 152, 186, 0.8);
+.university-image {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
 }
 
-label {
-    display: none;
-}
-
-#check {
-    z-index: 3;
-    display: none;
-}
-
-/* Updated styles for the footer */
+/* Footer styles */
 footer {
+    font-family: "Montserrat", sans-serif;
     background-color: #fff;
-    margin-top: 20%;
+    margin-top: 5%;
     margin-bottom: 10%;
-    color: #2c20ae;
-    padding: 20px 0; /* Remove left and right padding */
+    color: #1e176d;
+    padding: 20px 0;
     text-align: center;
-    display: flex; /* Use flexbox to align content */
-    justify-content: space-between; /* Distribute content evenly */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer a {
-    color: #2c20ae;
+    font-family: "Montserrat", sans-serif;
+    color: #1e176d;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -299,124 +275,87 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Styles for the footer logo */
 .tutorme-logo {
-    max-width: 100px; /* Adjust the width as needed */
+    max-width: 100px;
     height: auto;
 }
 
-
-
-/* Media query styles remain the same */
-/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+/* Media queries */
 @media (max-width: 960px) {
-    header .navigation{
+    .tutorme-logo {
+        max-width: 80px;
+    }
+    header .navigation {
         display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #2c20ae;
+        flex-direction: column; /* Change to vertical layout for smaller screens */
+        text-align: center;
     }
 
-    label{
+    header .navigation a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header label {
         display: block;
         font-size: 25px;
         cursor: pointer;
         transition: 0.3s;
         transition-property: color;
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
 
-    label:hover{
+    header label:hover {
         color: #fff;
     }
 
-    label .close-btn{
+    header label .menu-btn {
         display: none;
     }
 
-    #check:checked ~ header .navigation{
-        z-index: 2;
-        position: fixed;
-        background: rgba(114, 223, 255, 0.9);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #check:checked ~ header .navigation a{
-        font-weight: 700;
-        margin-right: 0;
-        margin-bottom: 50px;
-        letter-spacing: 2px;
-    }
-
-    #check:checked ~ header label .menu-btn{
-        display: none;
-    }
-
-    #check:checked ~ header label .close-btn{
+    header label .close-btn {
         z-index: 2;
         display: block;
         position: fixed;
     }
 
-    label .menu-btn{
-        position: absolute;
-    }
-
-    header .logo {
-        display: flex; /* Add this to align the text and image horizontally */
-        align-items: center; /* Center vertically within the header */
-    }
-
-    header .logo img {
-        max-width: 100px; /* Adjust the maximum width to the desired size */
-        height: auto; /* Let the height adjust proportionally to the width */
-        margin-right: 10px; /* Add some spacing between the logo text and image */
-    }
-
-    header .logo a {
-        color: #2c20ae;
-        font-size: 30px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 800;
-        letter-spacing: 1px;
-    }
-
-
-    .content .info h2{
+    .content .info h2 {
         font-size: 45px;
         line-height: 50px;
     }
 
-    .content .info h2 span{
+    .content .info h2 span {
         font-size: 40px;
         line-height: 600;
     }
 
-    .content .info p{
+    .content .info p {
         font-size: 14px;
     }
-
 }
 
-@media (max-width: 560px){
-
-    .content .info h2{
+@media (max-width: 560px) {
+    .tutorme-logo {
+        max-width: 60px;
+    }
+    .content .info h2 {
         font-size: 35px;
         line-height: 40px;
     }
 
-    .content .info h2 span{
+    .content .info h2 span {
         font-size: 30px;
         line-height: 600;
     }
 
-    .content .info p{
+    .content .info p {
         font-size: 14px;
     }
-        
-
 }
