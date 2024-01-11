@@ -1,4 +1,6 @@
 const db = require('../config/database');
+const fs = require('fs');
+
 
 module.exports = {
     updateUser: (user, session) => {
@@ -17,6 +19,22 @@ module.exports = {
             } else {
               resolve(result);
               console.log('Usuario actualizado exitosamente:', result);
+            }
+          });
+        });
+      },
+      updateUserImage: (id, imagePath) => {
+        return new Promise((resolve, reject) => {
+          // Lee la imagen como datos binarios
+          const imageBuffer = fs.readFileSync(imagePath);
+    
+          // Actualiza la columna de imagen en la base de datos
+          const updateQuery = 'INSERT INTO image (image, id_user) VALUES (?, ?)';
+          db.query(updateQuery, [imageBuffer, id], (err, result) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(result);
             }
           });
         });
